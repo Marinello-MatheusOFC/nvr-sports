@@ -23,11 +23,17 @@ const Components = {
     const navbar = document.querySelector('.navbar');
     if (!navbar) return;
 
+    const hadScrolledInitially = navbar.classList.contains('scrolled');
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (hadScrolledInitially) {
         navbar.classList.add('scrolled');
       } else {
-        navbar.classList.remove('scrolled');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
       }
     };
 
