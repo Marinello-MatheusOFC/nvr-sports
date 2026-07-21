@@ -17,53 +17,34 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header class="navbar navbar--scrolled" id="navbar">
-        <div class="navbar__container">
-            <a href="index.html" class="navbar__logo">
-                <span class="navbar__logo-icon">NVR</span>
-                <span class="navbar__logo-text">Sports</span>
+    <nav class="navbar scrolled" role="navigation" aria-label="Menu principal">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo" aria-label="NVR Sports">
+                <div class="navbar__logo-icon">NVR</div>
+                <span>NVR</span>Sports
             </a>
-            <nav class="navbar__nav">
+            <div class="navbar__links">
                 <a href="index.html" class="navbar__link">Home</a>
                 <a href="eventos.html" class="navbar__link">Eventos</a>
-                <a href="sobre.html" class="navbar__link">Sobre</a>
                 <a href="contato.html" class="navbar__link">Contato</a>
-            </nav>
-            <div class="navbar__actions">
-                <a href="login.html" class="btn btn--outline btn--sm">Entrar</a>
-                <a href="perfil.html" class="btn btn--primary btn--sm">Área do Atleta</a>
             </div>
-            <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menu">
-                <span class="navbar__toggle-bar"></span>
-                <span class="navbar__toggle-bar"></span>
-                <span class="navbar__toggle-bar"></span>
-            </button>
+            <div class="navbar__actions">
+                <a href="login.html" class="navbar__login">Entrar</a>
+                <a href="perfil.html" class="btn btn--primary navbar__cta-desktop">Área do Atleta</a>
+            </div>
+            <div class="navbar__mobile-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu__header">
-            <a href="index.html" class="navbar__logo">
-                <span class="navbar__logo-icon">NVR</span>
-                <span class="navbar__logo-text">Sports</span>
-            </a>
-            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Fechar menu">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-        <nav class="mobile-menu__nav">
-            <a href="index.html" class="mobile-menu__link">Home</a>
-            <a href="eventos.html" class="mobile-menu__link">Eventos</a>
-            <a href="sobre.html" class="mobile-menu__link">Sobre</a>
-            <a href="contato.html" class="mobile-menu__link">Contato</a>
-        </nav>
-        <div class="mobile-menu__actions">
-            <a href="login.html" class="btn btn--outline btn--block">Entrar</a>
-            <a href="perfil.html" class="btn btn--primary btn--block">Área do Atleta</a>
-        </div>
+    <div class="mobile-menu" role="dialog" aria-label="Menu mobile">
+        <a href="index.html" class="mobile-menu__link">Home</a>
+        <a href="eventos.html" class="mobile-menu__link">Eventos</a>
+        <a href="contato.html" class="mobile-menu__link">Contato</a>
+        <a href="login.html" class="mobile-menu__link">Entrar</a>
     </div>
-    <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">

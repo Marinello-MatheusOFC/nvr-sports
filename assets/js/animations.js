@@ -10,7 +10,7 @@ const Animations = {
   },
 
   initScrollReveal() {
-    const reveals = document.querySelectorAll('.reveal');
+    const reveals = document.querySelectorAll('.reveal, .reveal-stagger, .reveal--left, .reveal--right, .reveal--scale, .reveal--fade');
     if (!reveals.length) return;
 
     const observer = new IntersectionObserver(
@@ -21,7 +21,7 @@ const Animations = {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -30px 0px' }
     );
 
     reveals.forEach((el) => observer.observe(el));

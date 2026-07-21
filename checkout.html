@@ -18,68 +18,47 @@
 <body>
 
   <!-- Navbar -->
-  <header class="navbar navbar--scrolled" id="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar__logo">
-        <span class="navbar__logo-icon">
-          <i class="bi bi-lightning-charge-fill"></i>
-        </span>
-        <span class="navbar__logo-text">NVR <strong>Sports</strong></span>
+  <nav class="navbar scrolled" role="navigation" aria-label="Menu principal">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="NVR Sports">
+        <div class="navbar__logo-icon">NVR</div>
+        <span>NVR</span>Sports
       </a>
-      <nav class="navbar__menu" id="navMenu">
-        <a href="index.html" class="navbar__link">Início</a>
-        <a href="events.html" class="navbar__link">Eventos</a>
-        <a href="ranking.html" class="navbar__link">Ranking</a>
-        <a href="about.html" class="navbar__link">Sobre</a>
-      </nav>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="eventos.html" class="navbar__link">Eventos</a>
+        <a href="contato.html" class="navbar__link">Contato</a>
+      </div>
       <div class="navbar__actions">
-        <a href="login.html" class="btn btn--outline btn--sm">Entrar</a>
-        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
-          <span></span><span></span><span></span>
-        </button>
+        <a href="login.html" class="navbar__login">Entrar</a>
+      </div>
+      <div class="navbar__mobile-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
       </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu__overlay" data-close-menu></div>
-    <div class="mobile-menu__panel">
-      <div class="mobile-menu__header">
-        <a href="index.html" class="navbar__logo">
-          <span class="navbar__logo-icon"><i class="bi bi-lightning-charge-fill"></i></span>
-          <span class="navbar__logo-text">NVR <strong>Sports</strong></span>
-        </a>
-        <button class="mobile-menu__close" id="mobileClose" aria-label="Fechar menu">
-          <i class="bi bi-x-lg"></i>
-        </button>
-      </div>
-      <nav class="mobile-menu__nav">
-        <a href="index.html" class="mobile-menu__link">Início</a>
-        <a href="events.html" class="mobile-menu__link">Eventos</a>
-        <a href="ranking.html" class="mobile-menu__link">Ranking</a>
-        <a href="about.html" class="mobile-menu__link">Sobre</a>
-      </nav>
-      <div class="mobile-menu__footer">
-        <a href="login.html" class="btn btn--primary btn--block">Entrar</a>
-        <a href="register.html" class="btn btn--outline btn--block">Criar conta</a>
-      </div>
-    </div>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="eventos.html" class="mobile-menu__link">Eventos</a>
+    <a href="contato.html" class="mobile-menu__link">Contato</a>
+    <a href="login.html" class="mobile-menu__link">Entrar</a>
   </div>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <section class="checkout-hero">
     <div class="container">
-      <h1 class="page-header__title">Checkout</h1>
-      <p class="page-header__subtitle">Finalize sua inscrição no evento</p>
+      <h1 class="checkout-hero__title">Checkout</h1>
+      <p class="checkout-hero__subtitle">Finalize sua inscricao no evento</p>
     </div>
   </section>
 
-  <!-- Checkout Steps Indicator -->
-  <section class="checkout-steps" id="checkoutSteps">
+  <!-- Steps Indicator -->
+  <div class="checkout-steps-wrap" id="checkoutSteps">
     <div class="container">
-      <div class="checkout-steps__inner">
-        <div class="step step--active" data-step="1">
+      <div class="steps">
+        <div class="step active" data-step="1">
           <div class="step__circle">1</div>
           <span class="step__label">Dados</span>
         </div>
@@ -103,31 +82,32 @@
           <div class="step__circle">5</div>
           <span class="step__label">Pagamento</span>
         </div>
-        <div class="checkout-steps__progress">
-          <div class="checkout-steps__progress-bar" id="progressBar" style="width: 0%"></div>
-        </div>
+      </div>
+      <div class="progress">
+        <div class="progress__bar" id="progressBar" style="width: 0%"></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Checkout Layout -->
-  <section class="checkout-layout">
+  <!-- Checkout Grid -->
+  <section class="section">
     <div class="container">
-      <div class="checkout-layout__grid">
+      <div class="checkout-grid">
 
-        <!-- Form Area -->
-        <div class="checkout-layout__main">
+        <!-- Main Form Area -->
+        <div class="checkout-main">
 
           <!-- Step 1 - Dados -->
-          <div class="checkout-step-content" data-step-content="1" id="step1">
-            <div class="checkout-step-content__header">
-              <h2 class="checkout-step-content__title">
-                <i class="bi bi-person-fill"></i> Dados Pessoais
-              </h2>
-              <p class="checkout-step-content__desc">Preencha seus dados para inscrição</p>
+          <div class="checkout-panel" data-step-content="1" id="step1">
+            <div class="checkout-panel__header">
+              <i class="bi bi-person-fill"></i>
+              <div>
+                <h2 class="checkout-panel__title">Dados Pessoais</h2>
+                <p class="checkout-panel__desc">Preencha seus dados para inscricao</p>
+              </div>
             </div>
 
-            <form class="checkout-form" id="formDados" novalidate>
+            <form id="formDados" novalidate>
               <div class="form-row">
                 <div class="form-group form-group--full">
                   <label class="form-label" for="nome">Nome completo *</label>
@@ -179,22 +159,19 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label class="form-label">Gênero *</label>
-                  <div class="form-radio-group">
-                    <label class="form-radio">
+                  <label class="form-label">Genero *</label>
+                  <div class="radio-group">
+                    <label class="radio-card">
                       <input type="radio" name="genero" value="masculino" required>
-                      <span class="form-radio__box"></span>
-                      <span class="form-radio__text">Masculino</span>
+                      <span class="radio-card__box"><i class="bi bi-gender-male"></i> <span>Masculino</span></span>
                     </label>
-                    <label class="form-radio">
+                    <label class="radio-card">
                       <input type="radio" name="genero" value="feminino">
-                      <span class="form-radio__box"></span>
-                      <span class="form-radio__text">Feminino</span>
+                      <span class="radio-card__box"><i class="bi bi-gender-female"></i> <span>Feminino</span></span>
                     </label>
-                    <label class="form-radio">
+                    <label class="radio-card">
                       <input type="radio" name="genero" value="outro">
-                      <span class="form-radio__box"></span>
-                      <span class="form-radio__text">Outro</span>
+                      <span class="radio-card__box"><i class="bi bi-gender-ambiguous"></i> <span>Outro</span></span>
                     </label>
                   </div>
                   <span class="form-error" id="errorGenero"></span>
@@ -202,140 +179,114 @@
               </div>
             </form>
 
-            <div class="checkout-step-content__actions">
+            <div class="checkout-panel__actions">
               <div></div>
-              <button class="btn btn--primary btn--lg" data-next-step="2">
-                Próximo <i class="bi bi-arrow-right"></i>
-              </button>
+              <button class="btn btn--primary btn--lg" data-next-step="2">Proximo <i class="bi bi-arrow-right"></i></button>
             </div>
           </div>
 
           <!-- Step 2 - Categoria -->
-          <div class="checkout-step-content" data-step-content="2" id="step2" style="display:none">
-            <div class="checkout-step-content__header">
-              <h2 class="checkout-step-content__title">
-                <i class="bi bi-flag-fill"></i> Categoria
-              </h2>
-              <p class="checkout-step-content__desc">Escolha a distância da sua prova</p>
+          <div class="checkout-panel" data-step-content="2" id="step2" style="display:none">
+            <div class="checkout-panel__header">
+              <i class="bi bi-flag-fill"></i>
+              <div>
+                <h2 class="checkout-panel__title">Categoria</h2>
+                <p class="checkout-panel__desc">Escolha a distancia da sua prova</p>
+              </div>
             </div>
 
-            <div class="category-cards" id="categoryCards">
-              <label class="category-card" data-category="5k">
-                <input type="radio" name="categoria" value="5k" class="category-card__input">
-                <div class="category-card__body">
-                  <div class="category-card__badge" style="--badge-color: var(--color-secondary)">5K</div>
-                  <div class="category-card__info">
-                    <h3 class="category-card__title">5 quilômetros</h3>
-                    <p class="category-card__desc">Ideal para iniciantes e quem busca uma corrida rápida</p>
-                  </div>
-                  <div class="category-card__price">
-                    <span class="category-card__price-value">R$ 89</span>
-                    <span class="category-card__price-label">taxa de inscrição</span>
-                  </div>
-                  <div class="category-card__check">
-                    <i class="bi bi-check-circle-fill"></i>
-                  </div>
+            <div class="category-select" id="categoryCards">
+              <label class="category-option">
+                <input type="radio" name="categoria" value="5k" class="category-option__input">
+                <div class="category-option__box">
+                  <span class="category-option__badge" style="background:var(--color-secondary)">5K</span>
+                  <h3 class="category-option__name">5 quilometros</h3>
+                  <p class="category-option__desc">Ideal para iniciantes e quem busca uma corrida rapida</p>
+                  <span class="category-option__price">R$ 89</span>
+                  <span class="category-option__label">taxa de inscricao</span>
+                  <i class="bi bi-check-circle-fill category-option__check"></i>
                 </div>
               </label>
-
-              <label class="category-card" data-category="10k">
-                <input type="radio" name="categoria" value="10k" class="category-card__input">
-                <div class="category-card__body">
-                  <div class="category-card__badge" style="--badge-color: var(--color-primary)">10K</div>
-                  <div class="category-card__info">
-                    <h3 class="category-card__title">10 quilômetros</h3>
-                    <p class="category-card__desc">Para corredores intermediários com boa resistência</p>
-                  </div>
-                  <div class="category-card__price">
-                    <span class="category-card__price-value">R$ 109</span>
-                    <span class="category-card__price-label">taxa de inscrição</span>
-                  </div>
-                  <div class="category-card__check">
-                    <i class="bi bi-check-circle-fill"></i>
-                  </div>
+              <label class="category-option">
+                <input type="radio" name="categoria" value="10k" class="category-option__input">
+                <div class="category-option__box">
+                  <span class="category-option__badge" style="background:var(--color-primary)">10K</span>
+                  <h3 class="category-option__name">10 quilometros</h3>
+                  <p class="category-option__desc">Para corredores intermediarios com boa resistencia</p>
+                  <span class="category-option__price">R$ 109</span>
+                  <span class="category-option__label">taxa de inscricao</span>
+                  <i class="bi bi-check-circle-fill category-option__check"></i>
                 </div>
               </label>
-
-              <label class="category-card" data-category="21k">
-                <input type="radio" name="categoria" value="21k" class="category-card__input">
-                <div class="category-card__body">
-                  <div class="category-card__badge" style="--badge-color: var(--color-accent)">21K</div>
-                  <div class="category-card__info">
-                    <h3 class="category-card__title">Meia maratona</h3>
-                    <p class="category-card__desc">Desafio para corredores experientes e atletas avançados</p>
-                  </div>
-                  <div class="category-card__price">
-                    <span class="category-card__price-value">R$ 139</span>
-                    <span class="category-card__price-label">taxa de inscrição</span>
-                  </div>
-                  <div class="category-card__check">
-                    <i class="bi bi-check-circle-fill"></i>
-                  </div>
+              <label class="category-option">
+                <input type="radio" name="categoria" value="21k" class="category-option__input">
+                <div class="category-option__box">
+                  <span class="category-option__badge" style="background:var(--color-accent)">21K</span>
+                  <h3 class="category-option__name">Meia maratona</h3>
+                  <p class="category-option__desc">Desafio para corredores experientes e atletas avancados</p>
+                  <span class="category-option__price">R$ 139</span>
+                  <span class="category-option__label">taxa de inscricao</span>
+                  <i class="bi bi-check-circle-fill category-option__check"></i>
                 </div>
               </label>
             </div>
 
-            <div class="checkout-step-content__actions">
-              <button class="btn btn--outline btn--lg" data-prev-step="1">
-                <i class="bi bi-arrow-left"></i> Anterior
-              </button>
-              <button class="btn btn--primary btn--lg" data-next-step="3">
-                Próximo <i class="bi bi-arrow-right"></i>
-              </button>
+            <div class="checkout-panel__actions">
+              <button class="btn btn--outline btn--lg" data-prev-step="1"><i class="bi bi-arrow-left"></i> Anterior</button>
+              <button class="btn btn--primary btn--lg" data-next-step="3">Proximo <i class="bi bi-arrow-right"></i></button>
             </div>
           </div>
 
           <!-- Step 3 - Kit -->
-          <div class="checkout-step-content" data-step-content="3" id="step3" style="display:none">
-            <div class="checkout-step-content__header">
-              <h2 class="checkout-step-content__title">
-                <i class="bi bi-box-seam-fill"></i> Kit de Corrida
-              </h2>
-              <p class="checkout-step-content__desc">Selecione o tamanho da sua camiseta</p>
+          <div class="checkout-panel" data-step-content="3" id="step3" style="display:none">
+            <div class="checkout-panel__header">
+              <i class="bi bi-box-seam-fill"></i>
+              <div>
+                <h2 class="checkout-panel__title">Kit de Corrida</h2>
+                <p class="checkout-panel__desc">Selecione o tamanho da sua camiseta</p>
+              </div>
             </div>
 
-            <div class="kit-section">
-              <div class="kit-section__preview">
-                <div class="kit-tshirt">
-                  <i class="bi bi-handbag-fill"></i>
-                  <p>Camiseta oficial NVR Sports Run 2026</p>
-                  <small>Material: 100% poliéster tecnológico</small>
-                </div>
+            <div class="kit-choose">
+              <div class="kit-choose__preview">
+                <i class="bi bi-handbag-fill"></i>
+                <h4>Camiseta oficial NVR Sports Run 2026</h4>
+                <p>Material: 100% poliester tecnologico</p>
               </div>
 
-              <div class="kit-sizes" id="kitSizes">
-                <label class="kit-size">
-                  <input type="radio" name="camiseta" value="P" class="kit-size__input">
-                  <div class="kit-size__box">
-                    <span class="kit-size__label">P</span>
-                    <span class="kit-size__name">Pequeno</span>
+              <div class="size-grid" id="kitSizes">
+                <label class="size-option">
+                  <input type="radio" name="camiseta" value="P" class="size-option__input">
+                  <div class="size-option__box">
+                    <span class="size-option__letter">P</span>
+                    <span class="size-option__name">Pequeno</span>
                   </div>
                 </label>
-                <label class="kit-size">
-                  <input type="radio" name="camiseta" value="M" class="kit-size__input">
-                  <div class="kit-size__box">
-                    <span class="kit-size__label">M</span>
-                    <span class="kit-size__name">Médio</span>
+                <label class="size-option">
+                  <input type="radio" name="camiseta" value="M" class="size-option__input">
+                  <div class="size-option__box">
+                    <span class="size-option__letter">M</span>
+                    <span class="size-option__name">Medio</span>
                   </div>
                 </label>
-                <label class="kit-size">
-                  <input type="radio" name="camiseta" value="G" class="kit-size__input">
-                  <div class="kit-size__box">
-                    <span class="kit-size__label">G</span>
-                    <span class="kit-size__name">Grande</span>
+                <label class="size-option">
+                  <input type="radio" name="camiseta" value="G" class="size-option__input">
+                  <div class="size-option__box">
+                    <span class="size-option__letter">G</span>
+                    <span class="size-option__name">Grande</span>
                   </div>
                 </label>
-                <label class="kit-size">
-                  <input type="radio" name="camiseta" value="GG" class="kit-size__input">
-                  <div class="kit-size__box">
-                    <span class="kit-size__label">GG</span>
-                    <span class="kit-size__name">Extra Grande</span>
+                <label class="size-option">
+                  <input type="radio" name="camiseta" value="GG" class="size-option__input">
+                  <div class="size-option__box">
+                    <span class="size-option__letter">GG</span>
+                    <span class="size-option__name">Extra Grande</span>
                   </div>
                 </label>
               </div>
               <span class="form-error" id="errorCamiseta"></span>
 
-              <div class="kit-size-guide">
+              <div class="size-guide">
                 <i class="bi bi-rulers"></i>
                 <div>
                   <strong>Guia de tamanhos</strong>
@@ -344,276 +295,205 @@
               </div>
             </div>
 
-            <div class="checkout-step-content__actions">
-              <button class="btn btn--outline btn--lg" data-prev-step="2">
-                <i class="bi bi-arrow-left"></i> Anterior
-              </button>
-              <button class="btn btn--primary btn--lg" data-next-step="4">
-                Próximo <i class="bi bi-arrow-right"></i>
-              </button>
+            <div class="checkout-panel__actions">
+              <button class="btn btn--outline btn--lg" data-prev-step="2"><i class="bi bi-arrow-left"></i> Anterior</button>
+              <button class="btn btn--primary btn--lg" data-next-step="4">Proximo <i class="bi bi-arrow-right"></i></button>
             </div>
           </div>
 
           <!-- Step 4 - Resumo -->
-          <div class="checkout-step-content" data-step-content="4" id="step4" style="display:none">
-            <div class="checkout-step-content__header">
-              <h2 class="checkout-step-content__title">
-                <i class="bi bi-clipboard-check-fill"></i> Resumo do Pedido
-              </h2>
-              <p class="checkout-step-content__desc">Revise suas informações antes do pagamento</p>
+          <div class="checkout-panel" data-step-content="4" id="step4" style="display:none">
+            <div class="checkout-panel__header">
+              <i class="bi bi-clipboard-check-fill"></i>
+              <div>
+                <h2 class="checkout-panel__title">Resumo do Pedido</h2>
+                <p class="checkout-panel__desc">Revise suas informacoes antes do pagamento</p>
+              </div>
             </div>
 
-            <div class="summary-section">
-              <div class="summary-card">
-                <div class="summary-card__header">
+            <div class="review-cards">
+              <div class="review-card">
+                <div class="review-card__head">
                   <h3><i class="bi bi-person"></i> Dados Pessoais</h3>
-                  <button class="btn btn--text btn--sm" data-goto-step="1"><i class="bi bi-pencil"></i> Editar</button>
+                  <button class="btn btn--ghost btn--sm" data-goto-step="1"><i class="bi bi-pencil"></i> Editar</button>
                 </div>
-                <div class="summary-card__body" id="summaryDados">
-                  <div class="summary-item">
-                    <span class="summary-item__label">Nome</span>
-                    <span class="summary-item__value" id="summaryNome">—</span>
-                  </div>
-                  <div class="summary-item">
-                    <span class="summary-item__label">E-mail</span>
-                    <span class="summary-item__value" id="summaryEmail">—</span>
-                  </div>
-                  <div class="summary-item">
-                    <span class="summary-item__label">CPF</span>
-                    <span class="summary-item__value" id="summaryCpf">—</span>
-                  </div>
-                  <div class="summary-item">
-                    <span class="summary-item__label">Telefone</span>
-                    <span class="summary-item__value" id="summaryTelefone">—</span>
-                  </div>
-                  <div class="summary-item">
-                    <span class="summary-item__label">Data de nascimento</span>
-                    <span class="summary-item__value" id="summaryNascimento">—</span>
-                  </div>
-                  <div class="summary-item">
-                    <span class="summary-item__label">Gênero</span>
-                    <span class="summary-item__value" id="summaryGenero">—</span>
-                  </div>
+                <div class="review-card__body">
+                  <div class="review-row"><span class="review-row__label">Nome</span><span class="review-row__value" id="summaryNome">&mdash;</span></div>
+                  <div class="review-row"><span class="review-row__label">E-mail</span><span class="review-row__value" id="summaryEmail">&mdash;</span></div>
+                  <div class="review-row"><span class="review-row__label">CPF</span><span class="review-row__value" id="summaryCpf">&mdash;</span></div>
+                  <div class="review-row"><span class="review-row__label">Telefone</span><span class="review-row__value" id="summaryTelefone">&mdash;</span></div>
+                  <div class="review-row"><span class="review-row__label">Data de nascimento</span><span class="review-row__value" id="summaryNascimento">&mdash;</span></div>
+                  <div class="review-row"><span class="review-row__label">Genero</span><span class="review-row__value" id="summaryGenero">&mdash;</span></div>
                 </div>
               </div>
-
-              <div class="summary-card">
-                <div class="summary-card__header">
+              <div class="review-card">
+                <div class="review-card__head">
                   <h3><i class="bi bi-flag"></i> Categoria</h3>
-                  <button class="btn btn--text btn--sm" data-goto-step="2"><i class="bi bi-pencil"></i> Editar</button>
+                  <button class="btn btn--ghost btn--sm" data-goto-step="2"><i class="bi bi-pencil"></i> Editar</button>
                 </div>
-                <div class="summary-card__body">
-                  <div class="summary-item">
-                    <span class="summary-item__label">Prova</span>
-                    <span class="summary-item__value" id="summaryCategoria">—</span>
-                  </div>
-                  <div class="summary-item">
-                    <span class="summary-item__label">Inscrição</span>
-                    <span class="summary-item__value" id="summaryPreco">—</span>
-                  </div>
+                <div class="review-card__body">
+                  <div class="review-row"><span class="review-row__label">Prova</span><span class="review-row__value" id="summaryCategoria">&mdash;</span></div>
+                  <div class="review-row"><span class="review-row__label">Inscricao</span><span class="review-row__value" id="summaryPreco">&mdash;</span></div>
                 </div>
               </div>
-
-              <div class="summary-card">
-                <div class="summary-card__header">
+              <div class="review-card">
+                <div class="review-card__head">
                   <h3><i class="bi bi-box"></i> Kit</h3>
-                  <button class="btn btn--text btn--sm" data-goto-step="3"><i class="bi bi-pencil"></i> Editar</button>
+                  <button class="btn btn--ghost btn--sm" data-goto-step="3"><i class="bi bi-pencil"></i> Editar</button>
                 </div>
-                <div class="summary-card__body">
-                  <div class="summary-item">
-                    <span class="summary-item__label">Camiseta</span>
-                    <span class="summary-item__value" id="summaryCamiseta">—</span>
-                  </div>
+                <div class="review-card__body">
+                  <div class="review-row"><span class="review-row__label">Camiseta</span><span class="review-row__value" id="summaryCamiseta">&mdash;</span></div>
                 </div>
               </div>
-
-              <div class="summary-card summary-card--total">
-                <div class="summary-card__body">
-                  <div class="summary-item summary-item--total">
-                    <span class="summary-item__label">Total</span>
-                    <span class="summary-item__value" id="summaryTotal">R$ 0,00</span>
+              <div class="review-card review-card--total">
+                <div class="review-card__body">
+                  <div class="review-row review-row--total">
+                    <span class="review-row__label">Total</span>
+                    <span class="review-row__value" id="summaryTotal">R$ 0,00</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="checkout-step-content__actions">
-              <button class="btn btn--outline btn--lg" data-prev-step="3">
-                <i class="bi bi-arrow-left"></i> Anterior
-              </button>
-              <button class="btn btn--primary btn--lg" data-next-step="5">
-                Ir para Pagamento <i class="bi bi-arrow-right"></i>
-              </button>
+            <div class="checkout-panel__actions">
+              <button class="btn btn--outline btn--lg" data-prev-step="3"><i class="bi bi-arrow-left"></i> Anterior</button>
+              <button class="btn btn--primary btn--lg" data-next-step="5">Ir para Pagamento <i class="bi bi-arrow-right"></i></button>
             </div>
           </div>
 
           <!-- Step 5 - Pagamento -->
-          <div class="checkout-step-content" data-step-content="5" id="step5" style="display:none">
-            <div class="checkout-step-content__header">
-              <h2 class="checkout-step-content__title">
-                <i class="bi bi-credit-card-fill"></i> Pagamento
-              </h2>
-              <p class="checkout-step-content__desc">Escolha a forma de pagamento e finalize sua inscrição</p>
-            </div>
-
-            <div class="payment-section">
-              <!-- Payment Method Selection -->
-              <div class="payment-methods" id="paymentMethods">
-                <label class="payment-method">
-                  <input type="radio" name="pagamento" value="credito" class="payment-method__input" checked>
-                  <div class="payment-method__body">
-                    <div class="payment-method__icon"><i class="bi bi-credit-card-2-front"></i></div>
-                    <div class="payment-method__info">
-                      <strong>Cartão de Crédito</strong>
-                      <span>Parcele em até 3x sem juros</span>
-                    </div>
-                    <div class="payment-method__check"><i class="bi bi-check-circle-fill"></i></div>
-                  </div>
-                </label>
-
-                <label class="payment-method">
-                  <input type="radio" name="pagamento" value="pix" class="payment-method__input">
-                  <div class="payment-method__body">
-                    <div class="payment-method__icon"><i class="bi bi-qr-code"></i></div>
-                    <div class="payment-method__info">
-                      <strong>PIX</strong>
-                      <span>Aprovação instantânea com 5% de desconto</span>
-                    </div>
-                    <div class="payment-method__check"><i class="bi bi-check-circle-fill"></i></div>
-                  </div>
-                </label>
-
-                <label class="payment-method">
-                  <input type="radio" name="pagamento" value="boleto" class="payment-method__input">
-                  <div class="payment-method__body">
-                    <div class="payment-method__icon"><i class="bi bi-upc-scan"></i></div>
-                    <div class="payment-method__info">
-                      <strong>Boleto Bancário</strong>
-                      <span>Vencimento em 3 dias úteis</span>
-                    </div>
-                    <div class="payment-method__check"><i class="bi bi-check-circle-fill"></i></div>
-                  </div>
-                </label>
-              </div>
-
-              <!-- Credit Card Form -->
-              <div class="payment-card-form" id="cardForm">
-                <div class="form-row form-row--2">
-                  <div class="form-group form-group--full">
-                    <label class="form-label" for="cardNumber">Número do cartão *</label>
-                    <div class="form-floating">
-                      <input type="text" id="cardNumber" name="cardNumber" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19">
-                      <i class="bi bi-credit-card form-floating__icon"></i>
-                    </div>
-                    <span class="form-error" id="errorCardNumber"></span>
-                  </div>
-                </div>
-
-                <div class="form-row form-row--2">
-                  <div class="form-group form-group--full">
-                    <label class="form-label" for="cardName">Nome no cartão *</label>
-                    <div class="form-floating">
-                      <input type="text" id="cardName" name="cardName" class="form-input" placeholder="Nome impresso no cartão">
-                      <i class="bi bi-person form-floating__icon"></i>
-                    </div>
-                    <span class="form-error" id="errorCardName"></span>
-                  </div>
-                </div>
-
-                <div class="form-row form-row--2">
-                  <div class="form-group">
-                    <label class="form-label" for="cardExpiry">Validade *</label>
-                    <div class="form-floating">
-                      <input type="text" id="cardExpiry" name="cardExpiry" class="form-input" placeholder="MM/AA" maxlength="5">
-                      <i class="bi bi-calendar form-floating__icon"></i>
-                    </div>
-                    <span class="form-error" id="errorCardExpiry"></span>
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label" for="cardCvv">CVV *</label>
-                    <div class="form-floating">
-                      <input type="text" id="cardCvv" name="cardCvv" class="form-input" placeholder="000" maxlength="4">
-                      <i class="bi bi-shield-lock form-floating__icon"></i>
-                    </div>
-                    <span class="form-error" id="errorCardCvv"></span>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label class="form-label" for="parcelas">Parcelamento</label>
-                    <div class="form-floating">
-                      <select id="parcelas" name="parcelas" class="form-input form-select">
-                        <option value="1">1x de R$ 0,00 (à vista)</option>
-                        <option value="2">2x de R$ 0,00 sem juros</option>
-                        <option value="3">3x de R$ 0,00 sem juros</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PIX Info -->
-              <div class="payment-pix" id="pixInfo" style="display:none">
-                <div class="payment-pix__box">
-                  <p>Ao finalizar, um QR Code PIX será gerado para pagamento imediato.</p>
-                  <div class="payment-pix__discount">
-                    <i class="bi bi-tag-fill"></i> 5% de desconto aplicado automaticamente
-                  </div>
-                </div>
-              </div>
-
-              <!-- Boleto Info -->
-              <div class="payment-boleto" id="boletoInfo" style="display:none">
-                <div class="payment-boleto__box">
-                  <p>O boleto será gerado após a finalização. O prazo de pagamento é de 3 dias úteis.</p>
-                  <div class="payment-boleto__notice">
-                    <i class="bi bi-info-circle-fill"></i> Sua inscrição será confirmada após a compensação do boleto
-                  </div>
-                </div>
-              </div>
-
-              <!-- Security Notice -->
-              <div class="payment-security">
-                <i class="bi bi-shield-check"></i>
-                <span>Pagamento seguro e criptografado. Seus dados estão protegidos.</span>
+          <div class="checkout-panel" data-step-content="5" id="step5" style="display:none">
+            <div class="checkout-panel__header">
+              <i class="bi bi-credit-card-fill"></i>
+              <div>
+                <h2 class="checkout-panel__title">Pagamento</h2>
+                <p class="checkout-panel__desc">Escolha a forma de pagamento e finalize sua inscricao</p>
               </div>
             </div>
 
-            <div class="checkout-step-content__actions">
-              <button class="btn btn--outline btn--lg" data-prev-step="4">
-                <i class="bi bi-arrow-left"></i> Anterior
-              </button>
-              <button class="btn btn--primary btn--lg btn--pulse" id="btnFinalizar">
-                <i class="bi bi-lock-fill"></i> Finalizar Inscrição
-              </button>
+            <div class="pay-methods" id="paymentMethods">
+              <label class="pay-option">
+                <input type="radio" name="pagamento" value="credito" class="pay-option__input" checked>
+                <div class="pay-option__box">
+                  <div class="pay-option__icon"><i class="bi bi-credit-card-2-front"></i></div>
+                  <div class="pay-option__info"><strong>Cartao de Credito</strong><span>Parcele em ate 3x sem juros</span></div>
+                  <i class="bi bi-check-circle-fill pay-option__check"></i>
+                </div>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="pagamento" value="pix" class="pay-option__input">
+                <div class="pay-option__box">
+                  <div class="pay-option__icon"><i class="bi bi-qr-code"></i></div>
+                  <div class="pay-option__info"><strong>PIX</strong><span>Aprovacao instantanea com 5% de desconto</span></div>
+                  <i class="bi bi-check-circle-fill pay-option__check"></i>
+                </div>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="pagamento" value="boleto" class="pay-option__input">
+                <div class="pay-option__box">
+                  <div class="pay-option__icon"><i class="bi bi-upc-scan"></i></div>
+                  <div class="pay-option__info"><strong>Boleto Bancario</strong><span>Vencimento em 3 dias uteis</span></div>
+                  <i class="bi bi-check-circle-fill pay-option__check"></i>
+                </div>
+              </label>
+            </div>
+
+            <div class="pay-form" id="cardForm">
+              <div class="form-row">
+                <div class="form-group form-group--full">
+                  <label class="form-label" for="cardNumber">Numero do cartao *</label>
+                  <div class="form-floating">
+                    <input type="text" id="cardNumber" name="cardNumber" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19">
+                    <i class="bi bi-credit-card form-floating__icon"></i>
+                  </div>
+                  <span class="form-error" id="errorCardNumber"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group form-group--full">
+                  <label class="form-label" for="cardName">Nome no cartao *</label>
+                  <div class="form-floating">
+                    <input type="text" id="cardName" name="cardName" class="form-input" placeholder="Nome impresso no cartao">
+                    <i class="bi bi-person form-floating__icon"></i>
+                  </div>
+                  <span class="form-error" id="errorCardName"></span>
+                </div>
+              </div>
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label class="form-label" for="cardExpiry">Validade *</label>
+                  <div class="form-floating">
+                    <input type="text" id="cardExpiry" name="cardExpiry" class="form-input" placeholder="MM/AA" maxlength="5">
+                    <i class="bi bi-calendar form-floating__icon"></i>
+                  </div>
+                  <span class="form-error" id="errorCardExpiry"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cardCvv">CVV *</label>
+                  <div class="form-floating">
+                    <input type="text" id="cardCvv" name="cardCvv" class="form-input" placeholder="000" maxlength="4">
+                    <i class="bi bi-shield-lock form-floating__icon"></i>
+                  </div>
+                  <span class="form-error" id="errorCardCvv"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="parcelas">Parcelamento</label>
+                  <div class="form-floating">
+                    <select id="parcelas" name="parcelas" class="form-input form-select">
+                      <option value="1">1x de R$ 0,00 (a vista)</option>
+                      <option value="2">2x de R$ 0,00 sem juros</option>
+                      <option value="3">3x de R$ 0,00 sem juros</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pay-info" id="pixInfo" style="display:none">
+              <div class="pay-info__box">
+                <p>Ao finalizar, um QR Code PIX sera gerado para pagamento imediato.</p>
+                <div class="pay-info__tag"><i class="bi bi-tag-fill"></i> 5% de desconto aplicado automaticamente</div>
+              </div>
+            </div>
+
+            <div class="pay-info" id="boletoInfo" style="display:none">
+              <div class="pay-info__box">
+                <p>O boleto sera gerado apos a finalizacao. O prazo de pagamento e de 3 dias uteis.</p>
+                <div class="pay-info__tag pay-info__tag--warn"><i class="bi bi-info-circle-fill"></i> Sua inscricao sera confirmada apos a compensacao do boleto</div>
+              </div>
+            </div>
+
+            <div class="pay-security">
+              <i class="bi bi-shield-check"></i>
+              <span>Pagamento seguro e criptografado. Seus dados estao protegidos.</span>
+            </div>
+
+            <div class="checkout-panel__actions">
+              <button class="btn btn--outline btn--lg" data-prev-step="4"><i class="bi bi-arrow-left"></i> Anterior</button>
+              <button class="btn btn--primary btn--lg" id="btnFinalizar"><i class="bi bi-lock-fill"></i> Finalizar Inscricao</button>
             </div>
           </div>
 
-          <!-- Confirmation State -->
-          <div class="checkout-step-content" data-step-content="confirmation" id="stepConfirmation" style="display:none">
-            <div class="confirmation">
-              <div class="confirmation__icon">
-                <i class="bi bi-check-circle-fill"></i>
-              </div>
-              <h2 class="confirmation__title">Inscrição Confirmada!</h2>
-              <p class="confirmation__text">
-                Parabéns! Sua inscrição no <strong>NVR Sports Run 2026</strong> foi realizada com sucesso.
-                Você receberá um e-mail com todos os detalhes.
-              </p>
-
-              <div class="confirmation__qrcode">
-                <div class="confirmation__qrcode-box">
-                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="200" fill="#ffffff"/>
+          <!-- Confirmation -->
+          <div class="checkout-panel" data-step-content="confirmation" id="stepConfirmation" style="display:none">
+            <div class="confirm">
+              <div class="confirm__icon"><i class="bi bi-check-circle-fill"></i></div>
+              <h2 class="confirm__title">Inscricao Confirmada!</h2>
+              <p class="confirm__text">Parabens! Sua inscricao no <strong>NVR Sports Run 2026</strong> foi realizada com sucesso. Voce recebera um e-mail com todos os detalhes.</p>
+              <div class="confirm__qrcode">
+                <div class="confirm__qrcode-box">
+                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+                    <rect width="200" height="200" fill="#fff"/>
                     <rect x="10" y="10" width="50" height="50" fill="#1a1a2e" rx="4"/>
-                    <rect x="15" y="15" width="40" height="40" fill="#ffffff" rx="2"/>
+                    <rect x="15" y="15" width="40" height="40" fill="#fff" rx="2"/>
                     <rect x="20" y="20" width="30" height="30" fill="#1a1a2e" rx="2"/>
                     <rect x="140" y="10" width="50" height="50" fill="#1a1a2e" rx="4"/>
-                    <rect x="145" y="15" width="40" height="40" fill="#ffffff" rx="2"/>
+                    <rect x="145" y="15" width="40" height="40" fill="#fff" rx="2"/>
                     <rect x="150" y="20" width="30" height="30" fill="#1a1a2e" rx="2"/>
                     <rect x="10" y="140" width="50" height="50" fill="#1a1a2e" rx="4"/>
-                    <rect x="15" y="145" width="40" height="40" fill="#ffffff" rx="2"/>
+                    <rect x="15" y="145" width="40" height="40" fill="#fff" rx="2"/>
                     <rect x="20" y="150" width="30" height="30" fill="#1a1a2e" rx="2"/>
                     <rect x="70" y="10" width="15" height="15" fill="#1a1a2e"/>
                     <rect x="95" y="10" width="15" height="15" fill="#1a1a2e"/>
@@ -639,22 +519,16 @@
                     <rect x="120" y="170" width="15" height="15" fill="#1a1a2e"/>
                     <rect x="170" y="170" width="15" height="15" fill="#1a1a2e"/>
                   </svg>
-                  <p class="confirmation__qrcode-label">Acesse para acompanhar sua inscrição</p>
+                  <p>Acesse para acompanhar sua inscricao</p>
                 </div>
               </div>
-
-              <div class="confirmation__number">
-                <span>Número da inscrição</span>
+              <div class="confirm__number">
+                <span>Numero da inscricao</span>
                 <strong id="confirmationNumber">NVR-2026-00000</strong>
               </div>
-
-              <div class="confirmation__actions">
-                <a href="events.html" class="btn btn--primary btn--lg">
-                  <i class="bi bi-calendar-event"></i> Ver eventos
-                </a>
-                <a href="index.html" class="btn btn--outline btn--lg">
-                  <i class="bi bi-house"></i> Voltar ao início
-                </a>
+              <div class="confirm__actions">
+                <a href="eventos.html" class="btn btn--primary btn--lg"><i class="bi bi-calendar-event"></i> Ver eventos</a>
+                <a href="index.html" class="btn btn--outline btn--lg"><i class="bi bi-house"></i> Voltar ao inicio</a>
               </div>
             </div>
           </div>
@@ -663,52 +537,44 @@
 
         <!-- Sidebar -->
         <aside class="checkout-sidebar" id="checkoutSidebar">
-          <div class="checkout-summary">
-            <div class="checkout-summary__header">
+          <div class="sidebar-card">
+            <div class="sidebar-card__head">
               <h3><i class="bi bi-bag-check"></i> Resumo do Pedido</h3>
             </div>
-            <div class="checkout-summary__body">
-              <div class="checkout-summary__item">
-                <span class="checkout-summary__item-icon"><i class="bi bi-flag"></i></span>
-                <div class="checkout-summary__item-info">
-                  <span class="checkout-summary__item-name">Inscrição</span>
-                  <span class="checkout-summary__item-detail" id="sidebarCategoria">Selecione uma categoria</span>
+            <div class="sidebar-card__body">
+              <div class="sidebar-row">
+                <div class="sidebar-row__icon"><i class="bi bi-flag"></i></div>
+                <div class="sidebar-row__info">
+                  <span class="sidebar-row__name">Inscricao</span>
+                  <span class="sidebar-row__detail" id="sidebarCategoria">Selecione uma categoria</span>
                 </div>
-                <span class="checkout-summary__item-price" id="sidebarPreco">—</span>
+                <span class="sidebar-row__price" id="sidebarPreco">&mdash;</span>
               </div>
-              <div class="checkout-summary__item">
-                <span class="checkout-summary__item-icon"><i class="bi bi-box"></i></span>
-                <div class="checkout-summary__item-info">
-                  <span class="checkout-summary__item-name">Kit de Corrida</span>
-                  <span class="checkout-summary__item-detail" id="sidebarKit">Camiseta + Medalha + Chip</span>
+              <div class="sidebar-row">
+                <div class="sidebar-row__icon"><i class="bi bi-box"></i></div>
+                <div class="sidebar-row__info">
+                  <span class="sidebar-row__name">Kit de Corrida</span>
+                  <span class="sidebar-row__detail" id="sidebarKit">Camiseta + Medalha + Chip</span>
                 </div>
-                <span class="checkout-summary__item-price">Incluso</span>
+                <span class="sidebar-row__price">Incluso</span>
               </div>
             </div>
-            <div class="checkout-summary__divider"></div>
-            <div class="checkout-summary__footer">
-              <div class="checkout-summary__total">
-                <span>Total</span>
-                <strong id="sidebarTotal">R$ 0,00</strong>
-              </div>
+            <div class="sidebar-card__divider"></div>
+            <div class="sidebar-card__total">
+              <span>Total</span>
+              <strong id="sidebarTotal">R$ 0,00</strong>
             </div>
-            <div class="checkout-summary__coupon">
-              <div class="form-floating form-floating--sm">
+            <div class="sidebar-card__coupon">
+              <div class="form-floating">
                 <input type="text" class="form-input" placeholder="Cupom de desconto" id="couponInput">
                 <i class="bi bi-tag form-floating__icon"></i>
               </div>
               <button class="btn btn--outline btn--sm" id="btnCupom">Aplicar</button>
             </div>
-            <div class="checkout-summary__trust">
-              <div class="checkout-summary__trust-item">
-                <i class="bi bi-shield-check"></i> Compra segura
-              </div>
-              <div class="checkout-summary__trust-item">
-                <i class="bi bi-headset"></i> Suporte 24h
-              </div>
-              <div class="checkout-summary__trust-item">
-                <i class="bi bi-arrow-counterclockwise"></i> Cancelamento grátis
-              </div>
+            <div class="sidebar-card__trust">
+              <div class="sidebar-card__trust-item"><i class="bi bi-shield-check"></i> Compra segura</div>
+              <div class="sidebar-card__trust-item"><i class="bi bi-headset"></i> Suporte 24h</div>
+              <div class="sidebar-card__trust-item"><i class="bi bi-arrow-counterclockwise"></i> Cancelamento gratis</div>
             </div>
           </div>
         </aside>
@@ -724,9 +590,9 @@
         <div class="footer__brand">
           <a href="index.html" class="navbar__logo">
             <span class="navbar__logo-icon"><i class="bi bi-lightning-charge-fill"></i></span>
-            <span class="navbar__logo-text">NVR <strong>Sports</strong></span>
+            <span>NVR</span>Sports
           </a>
-          <p class="footer__desc">Conectando corredores e transformando vidas através do esporte desde 2018.</p>
+          <p class="footer__desc">Conectando corredores e transformando vidas atraves do esporte desde 2018.</p>
           <div class="footer__social">
             <a href="#" class="footer__social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="footer__social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -735,34 +601,37 @@
           </div>
         </div>
         <div class="footer__links">
-          <h4>Plataforma</h4>
-          <a href="events.html">Eventos</a>
-          <a href="ranking.html">Ranking</a>
-          <a href="results.html">Resultados</a>
-          <a href="blog.html">Blog</a>
+          <h4 class="footer__title">Plataforma</h4>
+          <a href="eventos.html" class="footer__link">Eventos</a>
+          <a href="#" class="footer__link">Ranking</a>
+          <a href="#" class="footer__link">Resultados</a>
+          <a href="#" class="footer__link">Blog</a>
         </div>
         <div class="footer__links">
-          <h4>Empresa</h4>
-          <a href="about.html">Sobre</a>
-          <a href="partners.html">Parceiros</a>
-          <a href="careers.html">Carreiras</a>
-          <a href="contact.html">Contato</a>
+          <h4 class="footer__title">Empresa</h4>
+          <a href="#" class="footer__link">Sobre</a>
+          <a href="#" class="footer__link">Parceiros</a>
+          <a href="#" class="footer__link">Carreiras</a>
+          <a href="contato.html" class="footer__link">Contato</a>
         </div>
         <div class="footer__links">
-          <h4>Suporte</h4>
-          <a href="faq.html">FAQ</a>
-          <a href="terms.html">Termos de uso</a>
-          <a href="privacy.html">Privacidade</a>
-          <a href="help.html">Central de ajuda</a>
+          <h4 class="footer__title">Suporte</h4>
+          <a href="#" class="footer__link">FAQ</a>
+          <a href="#" class="footer__link">Termos de uso</a>
+          <a href="#" class="footer__link">Privacidade</a>
+          <a href="#" class="footer__link">Central de ajuda</a>
         </div>
       </div>
       <div class="footer__bottom">
         <p>&copy; 2026 NVR Sports. Todos os direitos reservados.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Termos</a>
+          <a href="#">Privacidade</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/utils.js"></script>
   <script src="assets/js/animations.js"></script>
   <script src="assets/js/components.js"></script>
@@ -770,20 +639,17 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      let currentStep = 1;
-      const totalSteps = 5;
-
-      const stepsContainer = document.getElementById('checkoutSteps');
-      const progressBar = document.getElementById('progressBar');
-      const stepContents = document.querySelectorAll('.checkout-step-content');
-
-      const categoryPrices = { '5k': 89, '10k': 109, '21k': 139 };
-      const categoryNames = { '5k': '5K', '10k': '10K', '21k': '21K - Meia Maratona' };
-      const pixDiscount = 0.95;
+      var currentStep = 1;
+      var totalSteps = 5;
+      var stepsContainer = document.getElementById('checkoutSteps');
+      var progressBar = document.getElementById('progressBar');
+      var stepContents = document.querySelectorAll('.checkout-step-content, .checkout-panel[data-step-content]');
+      var categoryPrices = { '5k': 89, '10k': 109, '21k': 139 };
+      var categoryNames = { '5k': '5K', '10k': '10K', '21k': '21K - Meia Maratona' };
+      var pixDiscount = 0.95;
 
       function showStep(step) {
         stepContents.forEach(function (el) { el.style.display = 'none'; });
-
         if (step === 'confirmation') {
           document.getElementById('stepConfirmation').style.display = 'block';
           document.getElementById('checkoutSteps').style.display = 'none';
@@ -792,18 +658,15 @@
           var target = document.querySelector('[data-step-content="' + step + '"]');
           if (target) target.style.display = 'block';
         }
-
         var stepEls = stepsContainer.querySelectorAll('.step');
         stepEls.forEach(function (el) {
           var s = parseInt(el.getAttribute('data-step'));
-          el.classList.remove('step--active', 'step--completed');
-          if (s < step) el.classList.add('step--completed');
-          if (s === step) el.classList.add('step--active');
+          el.classList.remove('active', 'completed');
+          if (s < step) el.classList.add('completed');
+          if (s === step) el.classList.add('active');
         });
-
         var progress = ((step - 1) / (totalSteps - 1)) * 100;
         progressBar.style.width = progress + '%';
-
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
@@ -811,25 +674,20 @@
         var cat = document.querySelector('input[name="categoria"]:checked');
         var cam = document.querySelector('input[name="camiseta"]:checked');
         var price = 0;
-
         if (cat) {
           price = categoryPrices[cat.value] || 0;
           document.getElementById('sidebarCategoria').textContent = categoryNames[cat.value] || cat.value;
           document.getElementById('sidebarPreco').textContent = 'R$ ' + price.toFixed(2).replace('.', ',');
         }
-
         if (cam) {
           document.getElementById('sidebarKit').textContent = 'Camiseta ' + cam.value + ' + Medalha + Chip';
         }
-
         var paymentMethod = document.querySelector('input[name="pagamento"]:checked');
         var finalPrice = price;
-        if (paymentMethod && paymentMethod.value === 'pix') {
-          finalPrice = price * pixDiscount;
-        }
-
+        if (paymentMethod && paymentMethod.value === 'pix') finalPrice = price * pixDiscount;
         document.getElementById('sidebarTotal').textContent = 'R$ ' + finalPrice.toFixed(2).replace('.', ',');
-        document.getElementById('summaryTotal').textContent = 'R$ ' + finalPrice.toFixed(2).replace('.', ',');
+        var summaryTotal = document.getElementById('summaryTotal');
+        if (summaryTotal) summaryTotal.textContent = 'R$ ' + finalPrice.toFixed(2).replace('.', ',');
       }
 
       function updateSummary() {
@@ -841,14 +699,12 @@
         var gen = document.querySelector('input[name="genero"]:checked');
         var cat = document.querySelector('input[name="categoria"]:checked');
         var cam = document.querySelector('input[name="camiseta"]:checked');
-
-        document.getElementById('summaryNome').textContent = nome.value || '—';
-        document.getElementById('summaryEmail').textContent = email.value || '—';
-        document.getElementById('summaryCpf').textContent = cpf.value || '—';
-        document.getElementById('summaryTelefone').textContent = tel.value || '—';
-        document.getElementById('summaryNascimento').textContent = nasc.value || '—';
-        document.getElementById('summaryGenero').textContent = gen ? gen.value.charAt(0).toUpperCase() + gen.value.slice(1) : '—';
-
+        document.getElementById('summaryNome').textContent = nome.value || '\u2014';
+        document.getElementById('summaryEmail').textContent = email.value || '\u2014';
+        document.getElementById('summaryCpf').textContent = cpf.value || '\u2014';
+        document.getElementById('summaryTelefone').textContent = tel.value || '\u2014';
+        document.getElementById('summaryNascimento').textContent = nasc.value || '\u2014';
+        document.getElementById('summaryGenero').textContent = gen ? gen.value.charAt(0).toUpperCase() + gen.value.slice(1) : '\u2014';
         if (cat) {
           document.getElementById('summaryCategoria').textContent = categoryNames[cat.value];
           document.getElementById('summaryPreco').textContent = 'R$ ' + categoryPrices[cat.value].toFixed(2).replace('.', ',');
@@ -863,97 +719,64 @@
         document.getElementById('confirmationNumber').textContent = 'NVR-2026-' + num;
       }
 
-      // Next buttons
       document.querySelectorAll('[data-next-step]').forEach(function (btn) {
         btn.addEventListener('click', function () {
           var next = parseInt(this.getAttribute('data-next-step'));
-          if (next === 4) {
-            updateSummary();
-            updateSidebar();
-          }
-          if (next === 5) {
-            updateSidebar();
-          }
+          if (next === 4) { updateSummary(); updateSidebar(); }
+          if (next === 5) updateSidebar();
           currentStep = next;
           showStep(next);
         });
       });
 
-      // Prev buttons
       document.querySelectorAll('[data-prev-step]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          var prev = parseInt(this.getAttribute('data-prev-step'));
-          currentStep = prev;
-          showStep(prev);
+          currentStep = parseInt(this.getAttribute('data-prev-step'));
+          showStep(currentStep);
         });
       });
 
-      // Go to step buttons (edit links in summary)
       document.querySelectorAll('[data-goto-step]').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
           e.preventDefault();
-          var step = parseInt(this.getAttribute('data-goto-step'));
-          currentStep = step;
-          showStep(step);
+          currentStep = parseInt(this.getAttribute('data-goto-step'));
+          showStep(currentStep);
         });
       });
 
-      // Category selection
       document.querySelectorAll('input[name="categoria"]').forEach(function (input) {
         input.addEventListener('change', updateSidebar);
       });
-
-      // Kit selection
       document.querySelectorAll('input[name="camiseta"]').forEach(function (input) {
         input.addEventListener('change', updateSidebar);
       });
 
-      // Payment method toggle
       document.querySelectorAll('input[name="pagamento"]').forEach(function (input) {
         input.addEventListener('change', function () {
-          var cardForm = document.getElementById('cardForm');
-          var pixInfo = document.getElementById('pixInfo');
-          var boletoInfo = document.getElementById('boletoInfo');
-          cardForm.style.display = 'none';
-          pixInfo.style.display = 'none';
-          boletoInfo.style.display = 'none';
-
-          if (this.value === 'credito') cardForm.style.display = 'block';
-          else if (this.value === 'pix') pixInfo.style.display = 'block';
-          else if (this.value === 'boleto') boletoInfo.style.display = 'block';
-
+          document.getElementById('cardForm').style.display = 'none';
+          document.getElementById('pixInfo').style.display = 'none';
+          document.getElementById('boletoInfo').style.display = 'none';
+          if (this.value === 'credito') document.getElementById('cardForm').style.display = 'block';
+          else if (this.value === 'pix') document.getElementById('pixInfo').style.display = 'block';
+          else if (this.value === 'boleto') document.getElementById('boletoInfo').style.display = 'block';
           updateSidebar();
         });
       });
 
-      // Finalize
       document.getElementById('btnFinalizar').addEventListener('click', function () {
         generateConfirmationNumber();
         showStep('confirmation');
       });
 
-      // Coupon
       document.getElementById('btnCupom').addEventListener('click', function () {
         var val = document.getElementById('couponInput').value.trim();
-        if (val) {
-          alert('Cupom "' + val + '" aplicado com sucesso!');
-        }
+        if (val) alert('Cupom "' + val + '" aplicado com sucesso!');
       });
 
-      // Mobile menu
-      var navToggle = document.getElementById('navToggle');
+      var navToggle = document.querySelector('.navbar__mobile-toggle');
       var mobileMenu = document.getElementById('mobileMenu');
-      var mobileClose = document.getElementById('mobileClose');
-
-      if (navToggle) {
-        navToggle.addEventListener('click', function () {
-          mobileMenu.classList.add('active');
-        });
-      }
-      if (mobileClose) {
-        mobileClose.addEventListener('click', function () {
-          mobileMenu.classList.remove('active');
-        });
+      if (navToggle && mobileMenu) {
+        navToggle.addEventListener('click', function () { mobileMenu.classList.toggle('active'); });
       }
 
       showStep(1);

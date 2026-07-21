@@ -16,49 +16,34 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar--scrolled">
-        <div class="container navbar__container">
-            <a href="index.html" class="navbar__logo">
-                <span class="navbar__logo-nvr">NVR</span>
-                <span class="navbar__logo-sports">Sports</span>
+    <nav class="navbar scrolled" role="navigation" aria-label="Menu principal">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo" aria-label="NVR Sports">
+                <div class="navbar__logo-icon">NVR</div>
+                <span>NVR</span>Sports
             </a>
-            <ul class="navbar__links">
-                <li><a href="index.html" class="navbar__link">Home</a></li>
-                <li><a href="eventos.html" class="navbar__link">Eventos</a></li>
-                <li><a href="contato.html" class="navbar__link">Contato</a></li>
-            </ul>
-            <div class="navbar__actions">
-                <a href="#" class="navbar__login">Entrar</a>
-                <a href="#" class="btn btn--primary">Inscreva-se</a>
+            <div class="navbar__links">
+                <a href="index.html" class="navbar__link">Home</a>
+                <a href="eventos.html" class="navbar__link">Eventos</a>
+                <a href="contato.html" class="navbar__link">Contato</a>
             </div>
-            <button class="navbar__mobile-toggle" aria-label="Abrir menu">
-                <i class="bi bi-list"></i>
-            </button>
+            <div class="navbar__actions">
+                <a href="login.html" class="navbar__login">Entrar</a>
+                <a href="eventos.html" class="btn btn--primary navbar__cta-desktop">Inscreva-se</a>
+            </div>
+            <div class="navbar__mobile-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu__header">
-            <a href="index.html" class="navbar__logo">
-                <span class="navbar__logo-nvr">NVR</span>
-                <span class="navbar__logo-sports">Sports</span>
-            </a>
-            <button class="mobile-menu__close" aria-label="Fechar menu">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-        <ul class="mobile-menu__links">
-            <li><a href="index.html" class="mobile-menu__link">Home</a></li>
-            <li><a href="eventos.html" class="mobile-menu__link">Eventos</a></li>
-            <li><a href="contato.html" class="mobile-menu__link">Contato</a></li>
-        </ul>
-        <div class="mobile-menu__actions">
-            <a href="#" class="mobile-menu__link">Entrar</a>
-            <a href="#" class="btn btn--primary btn--block">Inscreva-se</a>
-        </div>
+    <div class="mobile-menu" role="dialog" aria-label="Menu mobile">
+        <a href="index.html" class="mobile-menu__link">Home</a>
+        <a href="eventos.html" class="mobile-menu__link">Eventos</a>
+        <a href="contato.html" class="mobile-menu__link">Contato</a>
+        <a href="login.html" class="mobile-menu__link">Entrar</a>
     </div>
-    <div class="mobile-menu__overlay" id="mobileOverlay"></div>
 
     <!-- Error Page Content -->
     <section class="error-page">

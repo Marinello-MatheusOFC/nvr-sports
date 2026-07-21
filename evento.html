@@ -3,639 +3,439 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meia Maratona de São Paulo 2026 - NVR Sports</title>
-  <meta name="description" content="Participe da Meia Maratona de São Paulo 2026. Inscreva-se agora na maior corrida de rua do Brasil.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Corrida de Rua São Paulo - NVR Sports</title>
+  <meta name="description" content="Corrida de Rua São Paulo 2026. Inscreva-se agora.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230057FF'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='white'>NVR</text></svg>">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <header class="navbar navbar--scrolled" role="banner">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__logo" aria-label="NVR Sports - Página Inicial">
-        <span class="navbar__logo-icon">NVR</span>
-        <span class="navbar__logo-text">SPORTS</span>
+  <nav class="navbar scrolled" role="navigation" aria-label="Menu principal">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="NVR Sports">
+        <div class="navbar__logo-icon">NVR</div>
+        <span>NVR</span>Sports
       </a>
-
-      <nav class="navbar__nav" role="navigation" aria-label="Menu principal">
-        <ul class="navbar__menu">
-          <li class="navbar__menu-item">
-            <a href="index.html" class="navbar__link">Início</a>
-          </li>
-          <li class="navbar__menu-item">
-            <a href="eventos.html" class="navbar__link navbar__link--active">Eventos</a>
-          </li>
-          <li class="navbar__menu-item">
-            <a href="resultados.html" class="navbar__link">Resultados</a>
-          </li>
-          <li class="navbar__menu-item">
-            <a href="sobre.html" class="navbar__link">Sobre</a>
-          </li>
-          <li class="navbar__menu-item">
-            <a href="contato.html" class="navbar__link">Contato</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="navbar__actions">
-        <a href="login.html" class="btn btn--outline btn--sm">Entrar</a>
-        <a href="cadastro.html" class="btn btn--primary btn--sm">Cadastrar</a>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="eventos.html" class="navbar__link active">Eventos</a>
+        <a href="contato.html" class="navbar__link">Contato</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
+      <div class="navbar__actions">
+        <a href="login.html" class="navbar__login">Entrar</a>
+        <a href="checkout.html" class="btn btn--primary navbar__cta-desktop">Inscreva-se</a>
+      </div>
+      <div class="navbar__mobile-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navegação mobile" aria-hidden="true">
-    <div class="mobile-menu__overlay" tabindex="-1"></div>
-    <div class="mobile-menu__content">
-      <div class="mobile-menu__header">
-        <a href="index.html" class="navbar__logo" aria-label="NVR Sports">
-          <span class="navbar__logo-icon">NVR</span>
-          <span class="navbar__logo-text">SPORTS</span>
-        </a>
-        <button class="mobile-menu__close" aria-label="Fechar menu">
-          <i class="bi bi-x-lg"></i>
-        </button>
+  <div class="mobile-menu" role="dialog" aria-label="Menu mobile">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="eventos.html" class="mobile-menu__link">Eventos</a>
+    <a href="contato.html" class="mobile-menu__link">Contato</a>
+    <a href="login.html" class="mobile-menu__link">Entrar</a>
+  </div>
+
+  <!-- Event Hero -->
+  <div class="event-hero" style="margin-top: var(--navbar-height-scrolled);">
+    <div class="event-hero__bg"></div>
+    <div class="event-hero__content container" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <div class="event-hero__badges" style="justify-content: center;">
+        <span class="badge badge--primary">Road Run</span>
+        <span class="badge" style="background: rgba(0,208,132,0.15); color: #00D084;"><i class="bi bi-check-circle-fill"></i> Inscrições Abertas</span>
       </div>
-      <nav class="mobile-menu__nav" aria-label="Menu mobile">
-        <ul class="mobile-menu__list">
-          <li class="mobile-menu__item">
-            <a href="index.html" class="mobile-menu__link">
-              <i class="bi bi-house-door"></i>Início
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="eventos.html" class="mobile-menu__link mobile-menu__link--active">
-              <i class="bi bi-calendar-event"></i>Eventos
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="resultados.html" class="mobile-menu__link">
-              <i class="bi bi-trophy"></i>Resultados
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="sobre.html" class="mobile-menu__link">
-              <i class="bi bi-info-circle"></i>Sobre
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="contato.html" class="mobile-menu__link">
-              <i class="bi bi-envelope"></i>Contato
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="mobile-menu__actions">
-        <a href="login.html" class="btn btn--outline btn--block">Entrar</a>
-        <a href="cadastro.html" class="btn btn--primary btn--block">Cadastrar</a>
+      <h1 class="event-hero__title" style="text-align: center;">Corrida de Rua São Paulo</h1>
+      <p style="font-size: var(--font-size-lg); color: rgba(255,255,255,0.8); max-width: 600px; text-align: center; margin-bottom: var(--space-6); line-height: 1.7;">A maior corrida de rua da cidade. Percorra os principais pontos turísticos de São Paulo nesta prova inesquecível.</p>
+      <div class="event-hero__meta" style="justify-content: center;">
+        <span class="event-hero__meta-item"><i class="bi bi-geo-alt"></i> São Paulo, SP</span>
+        <span class="event-hero__meta-item"><i class="bi bi-calendar3"></i> 15 de Agosto, 2026</span>
+        <span class="event-hero__meta-item"><i class="bi bi-people"></i> 3.500+ atletas</span>
+        <span class="event-hero__meta-item"><i class="bi bi-signpost-2"></i> 5K · 10K · 21K</span>
       </div>
     </div>
   </div>
 
-  <main class="event-detail" role="main">
+  <!-- Event Content -->
+  <section class="section">
+    <div class="container">
 
-    <!-- Event Hero Banner -->
-    <section class="event-hero" aria-label="Banner do evento">
-      <div class="event-hero__bg">
-        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&h=600&fit=crop" alt="Corredores em prova de rua" class="event-hero__image">
-        <div class="event-hero__overlay"></div>
-      </div>
-      <div class="event-hero__content">
-        <div class="event-hero__badges">
-          <span class="badge badge--primary">
-            <i class="bi bi-fire"></i> Destaque
-          </span>
-          <span class="badge badge--secondary">
-            <i class="bi bi-geo-alt"></i> São Paulo, SP
-          </span>
-          <span class="badge badge--accent">
-            <i class="bi bi-calendar-check"></i> 15 de Outubro, 2026
-          </span>
-        </div>
-        <h1 class="event-hero__title">Meia Maratona de São Paulo 2026</h1>
-        <p class="event-hero__subtitle">A maior corrida de rua do Brasil. Viva a emoção de correr pelas ruas da cidade mais vibrante da América Latina.</p>
-        <div class="event-hero__meta">
-          <div class="event-hero__meta-item">
-            <i class="bi bi-geo-alt-fill"></i>
-            <span>Av. Paulista, São Paulo - SP</span>
-          </div>
-          <div class="event-hero__meta-item">
-            <i class="bi bi-clock-fill"></i>
-            <span>06:00h</span>
-          </div>
-          <div class="event-hero__meta-item">
-            <i class="bi bi-people-fill"></i>
-            <span>12.500 atletas</span>
-          </div>
-          <div class="event-hero__meta-item">
-            <i class="bi bi-flag-fill"></i>
-            <span>21km</span>
-          </div>
+      <!-- Tabs -->
+      <div class="event-tabs">
+        <div class="event-tabs__list">
+          <button class="event-tab active" data-event-tab="sobre">Sobre</button>
+          <button class="event-tab" data-event-tab="categorias">Categorias</button>
+          <button class="event-tab" data-event-tab="percursos">Percursos</button>
+          <button class="event-tab" data-event-tab="kit">Kit do Atleta</button>
+          <button class="event-tab" data-event-tab="cronograma">Cronograma</button>
+          <button class="event-tab" data-event-tab="patrocinadores">Patrocinadores</button>
         </div>
       </div>
-    </section>
 
-    <!-- Event Tabs -->
-    <section class="event-tabs" aria-label="Informações do evento">
-      <div class="container">
-        <div class="event-tabs__nav" role="tablist" aria-label="Abas de navegação">
-          <button class="event-tabs__tab event-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab-sobre" id="tab-btn-sobre">
-            <i class="bi bi-info-circle"></i> Sobre
-          </button>
-          <button class="event-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-categorias" id="tab-btn-categorias">
-            <i class="bi bi-tags"></i> Categorias
-          </button>
-          <button class="event-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-percursos" id="tab-btn-percursos">
-            <i class="bi bi-map"></i> Percursos
-          </button>
-          <button class="event-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-kit" id="tab-btn-kit">
-            <i class="bi bi-box-seam"></i> Kit do Atleta
-          </button>
-          <button class="event-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-cronograma" id="tab-btn-cronograma">
-            <i class="bi bi-clock-history"></i> Cronograma
-          </button>
-          <button class="event-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-patrocinadores" id="tab-btn-patrocinadores">
-            <i class="bi bi-handshake"></i> Patrocinadores
-          </button>
-        </div>
+      <!-- Two Column Layout -->
+      <div style="display: grid; grid-template-columns: 1fr 380px; gap: var(--space-10); align-items: start;">
 
-        <div class="event-tabs__content">
+        <!-- Main Content -->
+        <div>
 
-          <!-- Two Column Layout -->
-          <div class="event-layout">
-
-            <!-- Main Content -->
-            <div class="event-layout__main">
-
-              <!-- Tab: Sobre -->
-              <div class="event-tabs__panel event-tabs__panel--active" role="tabpanel" id="tab-sobre" aria-labelledby="tab-btn-sobre">
-                <article class="event-content">
-                  <h2 class="event-content__title">Sobre o Evento</h2>
-                  <div class="event-content__text">
-                    <p>A Meia Maratona de São Paulo é o maior evento de corrida de rua do Brasil, reunindo mais de 12.500 atletas de todo o país e do exterior para percorrer os 21km pelas principais avenidas da cidade.</p>
-                    <p>Com início na icônica Avenida Paulista e passando por bairros históricos e modernos, o percurso oferece uma experiência única de cidade, com pontos de animação, hidratação a cada 2,5km e apoio médico especializado.</p>
-                    <p>O evento conta com categorias para todos os níveis de atletas, desde iniciantes até profissionais, além de categorias especiais para cadeirantes e atletas com deficiência.</p>
-                    <div class="event-content__highlights">
-                      <div class="event-content__highlight">
-                        <i class="bi bi-award-fill"></i>
-                        <div>
-                          <strong>Medalha exclusiva</strong>
-                          <span>Para todos os finalizadores</span>
-                        </div>
-                      </div>
-                      <div class="event-content__highlight">
-                        <i class="bi bi-cup-fill"></i>
-                        <div>
-                          <strong>Premiação</strong>
-                          <span>R$ 150.000 em prêmios</span>
-                        </div>
-                      </div>
-                      <div class="event-content__highlight">
-                        <i class="bi bi-broadcast"></i>
-                        <div>
-                          <strong>Transmissão ao vivo</strong>
-                          <span>Pela TV aberta e internet</span>
-                        </div>
-                      </div>
-                      <div class="event-content__highlight">
-                        <i class="bi bi-shield-check"></i>
-                        <div>
-                          <strong>Segurança</strong>
-                          <span>Suporte médico 24h</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Tab: Categorias -->
-              <div class="event-tabs__panel" role="tabpanel" id="tab-categorias" aria-labelledby="tab-btn-categorias" hidden>
-                <article class="event-content">
-                  <h2 class="event-content__title">Categorias</h2>
-                  <div class="event-categories">
-                    <div class="category-card">
-                      <div class="category-card__header">
-                        <i class="bi bi-person-fill"></i>
-                        <h3 class="category-card__title">Individual Masculino</h3>
-                      </div>
-                      <div class="category-card__body">
-                        <p>Aberta para atletas do sexo masculino com idade entre 18 e 80 anos.</p>
-                        <span class="category-card__price">A partir de <strong>R$ 180,00</strong></span>
-                      </div>
-                    </div>
-                    <div class="category-card">
-                      <div class="category-card__header">
-                        <i class="bi bi-person-fill"></i>
-                        <h3 class="category-card__title">Individual Feminino</h3>
-                      </div>
-                      <div class="category-card__body">
-                        <p>Aberta para atletas do sexo feminino com idade entre 18 e 80 anos.</p>
-                        <span class="category-card__price">A partir de <strong>R$ 180,00</strong></span>
-                      </div>
-                    </div>
-                    <div class="category-card">
-                      <div class="category-card__header">
-                        <i class="bi bi-people-fill"></i>
-                        <h3 class="category-card__title">Dupla Mista</h3>
-                      </div>
-                      <div class="category-card__body">
-                        <p>Formada por um atleta masculino e um feminino. Tempo computado pela soma dos dois.</p>
-                        <span class="category-card__price">A partir de <strong>R$ 320,00</strong></span>
-                      </div>
-                    </div>
-                    <div class="category-card">
-                      <div class="category-card__header">
-                        <i class="bi bi-person-wheelchair"></i>
-                        <h3 class="category-card__title">Cadeirantes</h3>
-                      </div>
-                      <div class="category-card__body">
-                        <p>Categoria exclusiva para atletas cadeirantes, com percurso adaptado e suporte especializado.</p>
-                        <span class="category-card__price">A partir de <strong>R$ 150,00</strong></span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Tab: Percursos -->
-              <div class="event-tabs__panel" role="tabpanel" id="tab-percursos" aria-labelledby="tab-btn-percursos" hidden>
-                <article class="event-content">
-                  <h2 class="event-content__title">Percursos</h2>
-                  <div class="event-content__text">
-                    <p>O percurso da Meia Maratona de São Paulo é certificado pela IAAF e AIMS, garantindo a validade dos recordes estabelecidos.</p>
-                  </div>
-                  <div class="event-route">
-                    <div class="event-route__map">
-                      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=400&fit=crop" alt="Mapa do percurso da Meia Maratona" class="event-route__image">
-                    </div>
-                    <div class="event-route__stats">
-                      <div class="route-stat">
-                        <i class="bi bi-rulers"></i>
-                        <span class="route-stat__value">21,097 km</span>
-                        <span class="route-stat__label">Distância</span>
-                      </div>
-                      <div class="route-stat">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        <span class="route-stat__value">85m</span>
-                        <span class="route-stat__label">Despositivo</span>
-                      </div>
-                      <div class="route-stat">
-                        <i class="bi bi-droplet-fill"></i>
-                        <span class="route-stat__value">8</span>
-                        <span class="route-stat__label">Pontos de Água</span>
-                      </div>
-                      <div class="route-stat">
-                        <i class="bi bi-cup-fill"></i>
-                        <span class="route-stat__value">4</span>
-                        <span class="route-stat__label">Pontos de Isotônico</span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Tab: Kit do Atleta -->
-              <div class="event-tabs__panel" role="tabpanel" id="tab-kit" aria-labelledby="tab-btn-kit" hidden>
-                <article class="event-content">
-                  <h2 class="event-content__title">Kit do Atleta</h2>
-                  <p class="event-content__text">O kit do atleta será entregue no Centro de Exposições Anhembi, nos dias 12 e 13 de outubro de 2026, das 10h às 20h.</p>
-                  <div class="event-kit">
-                    <div class="event-kit__item">
-                      <div class="event-kit__icon">
-                        <i class="bi bi-shirt"></i>
-                      </div>
-                      <h3>Camiseta Oficial</h3>
-                      <p>Camiseta Dry-Fit com design exclusivo da edição 2026.</p>
-                    </div>
-                    <div class="event-kit__item">
-                      <div class="event-kit__icon">
-                        <i class="bi bi-award"></i>
-                      </div>
-                      <h3>Medalha de Finalista</h3>
-                      <p>Medalha personalizada para todos que cruzarem a linha de chegada.</p>
-                    </div>
-                    <div class="event-kit__item">
-                      <div class="event-kit__icon">
-                        <i class="bi bi-bag"></i>
-                      </div>
-                      <h3>Bolsa do Atleta</h3>
-                      <p>Bolsa com todos os itens do kit e materiais dos patrocinadores.</p>
-                    </div>
-                    <div class="event-kit__item">
-                      <div class="event-kit__icon">
-                        <i class="bi bi-hash"></i>
-                      </div>
-                      <h3>Número de Peito</h3>
-                      <p>Número com chip de tempo integrado para controle de resultado.</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Tab: Cronograma -->
-              <div class="event-tabs__panel" role="tabpanel" id="tab-cronograma" aria-labelledby="tab-btn-cronograma" hidden>
-                <article class="event-content">
-                  <h2 class="event-content__title">Cronograma</h2>
-                  <div class="event-timeline">
-                    <div class="timeline-item">
-                      <div class="timeline-item__time">05:00</div>
-                      <div class="timeline-item__content">
-                        <h3>Abertura do Parque</h3>
-                        <p>Abertura do parque de exposições para os atletas.</p>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-item__time">05:30</div>
-                      <div class="timeline-item__content">
-                        <h3>Aquecimento Coletivo</h3>
-                        <p>Aquecimento guiado por instrutores na pista de atletismo.</p>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-item__time">06:00</div>
-                      <div class="timeline-item__content">
-                        <h3>Largada - Elite</h3>
-                        <p>Largada dos atletas das categorias elite e sub-23.</p>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-item__time">06:15</div>
-                      <div class="timeline-item__content">
-                        <h3>Largada - Geral</h3>
-                        <p>Largada demorada para todas as demais categorias.</p>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-item__time">08:30</div>
-                      <div class="timeline-item__content">
-                        <h3>Cerimônia de Premiação</h3>
-                        <p>Entrega de troféus e prêmios para os primeiros colocados.</p>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-item__time">10:00</div>
-                      <div class="timeline-item__content">
-                        <h3>Fim do Evento</h3>
-                        <p>Encerramento oficial da Meia Maratona de São Paulo 2026.</p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Tab: Patrocinadores -->
-              <div class="event-tabs__panel" role="tabpanel" id="tab-patrocinadores" aria-labelledby="tab-btn-patrocinadores" hidden>
-                <article class="event-content">
-                  <h2 class="event-content__title">Patrocinadores</h2>
-                  <p class="event-content__text">Conheça os patrocinadores que tornam este evento possível.</p>
-
-                  <div class="sponsors">
-                    <h3 class="sponsors__category">Patrocínio Master</h3>
-                    <div class="sponsors__grid sponsors__grid--main">
-                      <div class="sponsor-card sponsor-card--main">
-                        <img src="https://via.placeholder.com/200x80/0057FF/ffffff?text=Nike" alt="Nike" class="sponsor-card__logo">
-                      </div>
-                      <div class="sponsor-card sponsor-card--main">
-                        <img src="https://via.placeholder.com/200x80/FF7A00/ffffff?text=Gatorade" alt="Gatorade" class="sponsor-card__logo">
-                      </div>
-                    </div>
-
-                    <h3 class="sponsors__category">Patrocínio Ouro</h3>
-                    <div class="sponsors__grid sponsors__grid--gold">
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/160x60/00D084/ffffff?text=Asics" alt="Asics" class="sponsor-card__logo">
-                      </div>
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/160x60/333333/ffffff?text=Garmin" alt="Garmin" class="sponsor-card__logo">
-                      </div>
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/160x60/0057FF/ffffff?text=Itaú" alt="Itaú" class="sponsor-card__logo">
-                      </div>
-                    </div>
-
-                    <h3 class="sponsors__category">Patrocínio Prata</h3>
-                    <div class="sponsors__grid sponsors__grid--silver">
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/120x50/666666/ffffff?text=Havaianas" alt="Havaianas" class="sponsor-card__logo">
-                      </div>
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/120x50/666666/ffffff?text=Salkin" alt="Salkin" class="sponsor-card__logo">
-                      </div>
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/120x50/666666/ffffff?text=Nescau" alt="Nescau" class="sponsor-card__logo">
-                      </div>
-                      <div class="sponsor-card">
-                        <img src="https://via.placeholder.com/120x50/666666/ffffff?text=Trident" alt="Trident" class="sponsor-card__logo">
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
+          <!-- Sobre -->
+          <div data-event-tab-content="sobre">
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Sobre o Evento</h3>
+            <div style="color: var(--color-text-secondary); line-height: 1.9; font-size: var(--font-size-md); margin-bottom: var(--space-8);">
+              <p style="margin-bottom: var(--space-5);">A Corrida de Rua São Paulo é um dos maiores eventos de corrida de rua do Brasil. Com mais de 3.500 atletas inscritos, a prova percorre os principais pontos turísticos da cidade, oferecendo uma experiência inesquecível para corredores de todos os níveis.</p>
+              <p style="margin-bottom: var(--space-5);">O evento conta com categorias de 5K, 10K e 21K, sendo ideal tanto para quem está começando quanto para atletas experientes. O percurso é certificado pela AIMS e é considerado um dos mais rápidos da América Latina.</p>
+              <p>Além da corrida, o evento oferece village do atleta, aquecimento guiado, premiação em categorias e pós-corrida com comida e música ao vivo.</p>
             </div>
 
-            <!-- Sidebar -->
-            <aside class="event-layout__sidebar" aria-label="Informações de inscrição">
-              <div class="event-sidebar">
-                <div class="event-sidebar__cta">
-                  <a href="#" class="btn btn--primary btn--lg btn--block event-sidebar__btn" aria-label="Inscreva-se na Meia Maratona de São Paulo 2026">
-                    <i class="bi bi-pencil-square"></i>
-                    QUERO ME INSCREVER
-                  </a>
-                  <p class="event-sidebar__cta-note">
-                    <i class="bi bi-shield-check"></i>
-                    Inscrição 100% segura
-                  </p>
-                </div>
-
-                <div class="event-sidebar__summary">
-                  <h3 class="event-sidebar__title">Resumo do Evento</h3>
-                  <ul class="event-sidebar__list">
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-calendar-event"></i>
-                      <div>
-                        <strong>Data</strong>
-                        <span>15 de Outubro, 2026</span>
-                      </div>
-                    </li>
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-clock"></i>
-                      <div>
-                        <strong>Horário</strong>
-                        <span>06:00h</span>
-                      </div>
-                    </li>
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-geo-alt"></i>
-                      <div>
-                        <strong>Local</strong>
-                        <span>Av. Paulista, São Paulo - SP</span>
-                      </div>
-                    </li>
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-rulers"></i>
-                      <div>
-                        <strong>Distância</strong>
-                        <span>21km (Meia Maratona)</span>
-                      </div>
-                    </li>
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-tag"></i>
-                      <div>
-                        <strong>Inscrições</strong>
-                        <span>A partir de R$ 150,00</span>
-                      </div>
-                    </li>
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-people"></i>
-                      <div>
-                        <strong>Vagas</strong>
-                        <span>12.500 atletas</span>
-                      </div>
-                    </li>
-                    <li class="event-sidebar__item">
-                      <i class="bi bi-exclamation-triangle"></i>
-                      <div>
-                        <strong>Inscrições encerram</strong>
-                        <span class="text--accent">30/Set/2026</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="event-sidebar__countdown">
-                  <h3 class="event-sidebar__title">
-                    <i class="bi bi-hourglass-split"></i> Contagem Regressiva
-                  </h3>
-                  <div class="countdown" aria-label="Contagem regressiva para o evento">
-                    <div class="countdown__item">
-                      <span class="countdown__value" id="countdown-days">116</span>
-                      <span class="countdown__label">Dias</span>
-                    </div>
-                    <div class="countdown__separator">:</div>
-                    <div class="countdown__item">
-                      <span class="countdown__value" id="countdown-hours">08</span>
-                      <span class="countdown__label">Horas</span>
-                    </div>
-                    <div class="countdown__separator">:</div>
-                    <div class="countdown__item">
-                      <span class="countdown__value" id="countdown-minutes">22</span>
-                      <span class="countdown__label">Min</span>
-                    </div>
-                    <div class="countdown__separator">:</div>
-                    <div class="countdown__item">
-                      <span class="countdown__value" id="countdown-seconds">45</span>
-                      <span class="countdown__label">Seg</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="event-sidebar__share">
-                  <h3 class="event-sidebar__title">
-                    <i class="bi bi-share-fill"></i> Compartilhar
-                  </h3>
-                  <div class="event-sidebar__share-buttons">
-                    <a href="#" class="share-btn share-btn--facebook" aria-label="Compartilhar no Facebook">
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="#" class="share-btn share-btn--twitter" aria-label="Compartilhar no Twitter">
-                      <i class="bi bi-twitter-x"></i>
-                    </a>
-                    <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartilhar no WhatsApp">
-                      <i class="bi bi-whatsapp"></i>
-                    </a>
-                    <a href="#" class="share-btn share-btn--link" aria-label="Copiar link">
-                      <i class="bi bi-link-45deg"></i>
-                    </a>
-                  </div>
+            <!-- Highlights -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-8);">
+              <div style="display: flex; gap: var(--space-3); padding: var(--space-5); background: var(--color-primary-50); border-radius: var(--radius-lg);">
+                <i class="bi bi-award-fill" style="font-size: 24px; color: var(--color-primary); flex-shrink: 0;"></i>
+                <div>
+                  <div style="font-weight: var(--font-weight-semibold); margin-bottom: 2px;">Medalha exclusiva</div>
+                  <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">Para todos os finalizadores</div>
                 </div>
               </div>
-            </aside>
+              <div style="display: flex; gap: var(--space-3); padding: var(--space-5); background: rgba(0,208,132,0.05); border-radius: var(--radius-lg);">
+                <i class="bi bi-cup-fill" style="font-size: 24px; color: var(--color-secondary); flex-shrink: 0;"></i>
+                <div>
+                  <div style="font-weight: var(--font-weight-semibold); margin-bottom: 2px;">Premiação</div>
+                  <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">R$ 50.000 em prêmios</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: var(--space-3); padding: var(--space-5); background: rgba(255,122,0,0.05); border-radius: var(--radius-lg);">
+                <i class="bi bi-broadcast" style="font-size: 24px; color: var(--color-accent); flex-shrink: 0;"></i>
+                <div>
+                  <div style="font-weight: var(--font-weight-semibold); margin-bottom: 2px;">Transmissão ao vivo</div>
+                  <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">Pela TV aberta e internet</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: var(--space-3); padding: var(--space-5); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg);">
+                <i class="bi bi-shield-check" style="font-size: 24px; color: var(--color-text); flex-shrink: 0;"></i>
+                <div>
+                  <div style="font-weight: var(--font-weight-semibold); margin-bottom: 2px;">Segurança</div>
+                  <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">Suporte médico 24h</div>
+                </div>
+              </div>
+            </div>
 
+            <!-- Gallery -->
+            <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-4);">Galeria</h4>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-8);">
+              <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=400&q=80" alt="Corrida" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-lg);" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=400&q=80" alt="Atletas" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-lg);" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=400&q=80" alt="Corrida" style="width:100%; height:180px; object-fit:cover; border-radius: var(--radius-lg);" loading="lazy">
+            </div>
+
+            <!-- Map -->
+            <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-4);">Localização</h4>
+            <div class="map-container">
+              <div class="map-placeholder">
+                <i class="bi bi-geo-alt"></i>
+                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-  </main>
+          <!-- Categorias -->
+          <div data-event-tab-content="categorias" style="display:none;">
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Categorias e Valores</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+              <div class="category-card selected" tabindex="0" role="button">
+                <div class="category-card__name">5K</div>
+                <div class="category-card__distance">5 Quilômetros</div>
+                <div class="category-card__price">R$ 89</div>
+                <p style="font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: var(--space-2);">Ideal para iniciantes</p>
+              </div>
+              <div class="category-card" tabindex="0" role="button">
+                <div class="category-card__name">10K</div>
+                <div class="category-card__distance">10 Quilômetros</div>
+                <div class="category-card__price">R$ 109</div>
+                <p style="font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: var(--space-2);">Nível intermediário</p>
+              </div>
+              <div class="category-card" tabindex="0" role="button">
+                <div class="category-card__name">21K</div>
+                <div class="category-card__distance">Meia Maratona</div>
+                <div class="category-card__price">R$ 139</div>
+                <p style="font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: var(--space-2);">Para atletas experientes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Percursos -->
+          <div data-event-tab-content="percursos" style="display:none;">
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Percursos</h3>
+            <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+              <div class="profile-card">
+                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-3);">
+                  <div style="width:56px;height:56px;border-radius:var(--radius-md);background:var(--color-primary-50);display:flex;align-items:center;justify-content:center;color:var(--color-primary);font-weight:700;font-size:var(--font-size-lg);">5K</div>
+                  <div>
+                    <h4 style="font-size: var(--font-size-lg); margin-bottom: 2px;">Percurso 5K</h4>
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">Plano e rápido — ideal para recorde pessoal</p>
+                  </div>
+                </div>
+                <p style="font-size: var(--font-size-base); color: var(--color-text-secondary); line-height: 1.7;">O percurso da 5K percorre a Avenida Paulista e adjacências, com largada e chegada no MASP. Terreno totalmente plano, ideal para quebras de recorde.</p>
+              </div>
+              <div class="profile-card">
+                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-3);">
+                  <div style="width:56px;height:56px;border-radius:var(--radius-md);background:rgba(0,208,132,0.1);display:flex;align-items:center;justify-content:center;color:var(--color-secondary);font-weight:700;font-size:var(--font-size-lg);">10K</div>
+                  <div>
+                    <h4 style="font-size: var(--font-size-lg); margin-bottom: 2px;">Percurso 10K</h4>
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">Turístico pela região central</p>
+                  </div>
+                </div>
+                <p style="font-size: var(--font-size-base); color: var(--color-text-secondary); line-height: 1.7;">O percurso de 10K passa pela Avenida Paulista, Parque Trianon e volta pela Rua Augusta. Uma experiência completa pela cidade.</p>
+              </div>
+              <div class="profile-card">
+                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-3);">
+                  <div style="width:56px;height:56px;border-radius:var(--radius-md);background:rgba(255,122,0,0.1);display:flex;align-items:center;justify-content:center;color:var(--color-accent);font-weight:700;font-size:var(--font-size-lg);">21K</div>
+                  <div>
+                    <h4 style="font-size: var(--font-size-lg); margin-bottom: 2px;">Percurso 21K</h4>
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">A verdadeira experiência São Paulo</p>
+                  </div>
+                </div>
+                <p style="font-size: var(--font-size-base); color: var(--color-text-secondary); line-height: 1.7;">A meia maratona percorre os bairros mais icônicos da cidade, incluindo a Avenida Paulista, Ibirapuera e a região da Faria Lima.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kit -->
+          <div data-event-tab-content="kit" style="display:none;">
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Kit do Atleta</h3>
+            <p style="color: var(--color-text-secondary); font-size: var(--font-size-md); margin-bottom: var(--space-8); line-height: 1.7;">Confira tudo que está incluído no kit do atleta para esta prova:</p>
+            <div class="kit-preview" style="margin-bottom: var(--space-10);">
+              <div class="kit-item">
+                <div class="kit-item__icon"><i class="bi bi-tshirt"></i></div>
+                <div class="kit-item__name">Camiseta Oficial</div>
+              </div>
+              <div class="kit-item">
+                <div class="kit-item__icon"><i class="bi bi-qr-code"></i></div>
+                <div class="kit-item__name">QR Code</div>
+              </div>
+              <div class="kit-item">
+                <div class="kit-item__icon"><i class="bi bi-tag"></i></div>
+                <div class="kit-item__name">Bib Numerada</div>
+              </div>
+              <div class="kit-item">
+                <div class="kit-item__icon"><i class="bi bi-bag"></i></div>
+                <div class="kit-item__name">Sacola</div>
+              </div>
+              <div class="kit-item">
+                <div class="kit-item__icon"><i class="bi bi-award"></i></div>
+                <div class="kit-item__name">Medalha</div>
+              </div>
+              <div class="kit-item">
+                <div class="kit-item__icon"><i class="bi bi-cup-hot"></i></div>
+                <div class="kit-item__name">Pós-Prova</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cronograma -->
+          <div data-event-tab-content="cronograma" style="display:none;">
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Cronograma</h3>
+            <div class="timeline">
+              <div class="timeline-item active">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">05:00</div>
+                <div class="timeline-item__title">Abertura do Village</div>
+                <div class="timeline-item__description">Retirada de kits e credenciamento</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">06:00</div>
+                <div class="timeline-item__title">Aquecimento Coletivo</div>
+                <div class="timeline-item__description">Alongamento guiado na largada</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">06:30</div>
+                <div class="timeline-item__title">Largada 21K</div>
+                <div class="timeline-item__description">Corredores da meia maratona</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">07:00</div>
+                <div class="timeline-item__title">Largada 10K</div>
+                <div class="timeline-item__description">Corredores dos 10 quilômetros</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">07:30</div>
+                <div class="timeline-item__title">Largada 5K</div>
+                <div class="timeline-item__description">Corredores dos 5 quilômetros</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">09:00</div>
+                <div class="timeline-item__title">Premiação</div>
+                <div class="timeline-item__description">Cerimônia de entrega de troféus</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__dot"></div>
+                <div class="timeline-item__time">11:00</div>
+                <div class="timeline-item__title">Encerramento</div>
+                <div class="timeline-item__description">Fim do evento e pós-corrida</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Patrocinadores -->
+          <div data-event-tab-content="patrocinadores" style="display:none;">
+            <h3 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-6);">Patrocinadores</h3>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">Conheça quem torna este evento possível:</p>
+            <div style="display: flex; flex-direction: column; gap: var(--space-8);">
+              <div>
+                <h4 style="font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: var(--space-4);">Patrocínio Master</h4>
+                <div style="display: flex; gap: var(--space-6); flex-wrap: wrap;">
+                  <div style="padding: var(--space-5) var(--space-8); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); color: var(--color-primary);">NIKE</div>
+                  <div style="padding: var(--space-5) var(--space-8); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); color: var(--color-accent);">GATORADE</div>
+                </div>
+              </div>
+              <div>
+                <h4 style="font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: var(--space-4);">Patrocínio Ouro</h4>
+                <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+                  <div style="padding: var(--space-4) var(--space-6); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); font-weight: var(--font-weight-semibold);">ASICS</div>
+                  <div style="padding: var(--space-4) var(--space-6); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); font-weight: var(--font-weight-semibold);">GARMIN</div>
+                  <div style="padding: var(--space-4) var(--space-6); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); font-weight: var(--font-weight-semibold);">ITAÚ</div>
+                </div>
+              </div>
+              <div>
+                <h4 style="font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: var(--space-4);">Patrocínio Prata</h4>
+                <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                  <div style="padding: var(--space-3) var(--space-5); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-md); font-size: var(--font-size-sm);">Havaianas</div>
+                  <div style="padding: var(--space-3) var(--space-5); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-md); font-size: var(--font-size-sm);">Salkin</div>
+                  <div style="padding: var(--space-3) var(--space-5); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-md); font-size: var(--font-size-sm);">Nescau</div>
+                  <div style="padding: var(--space-3) var(--space-5); background: var(--color-card); border: 1px solid var(--color-border-light); border-radius: var(--radius-md); font-size: var(--font-size-sm);">Trident</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside style="position: sticky; top: calc(var(--navbar-height-scrolled) + var(--space-6));">
+          <div class="checkout-summary">
+            <a href="checkout.html" class="btn btn--primary btn--lg" style="width: 100%; margin-bottom: var(--space-4);">
+              <i class="bi bi-pencil-square"></i> QUERO ME INSCREVER
+            </a>
+            <p style="text-align: center; font-size: var(--font-size-xs); color: var(--color-text-muted); margin-bottom: var(--space-6);"><i class="bi bi-shield-check"></i> Inscrição 100% segura</p>
+
+            <h4 style="font-size: var(--font-size-base); font-weight: var(--font-weight-bold); margin-bottom: var(--space-4);">Resumo do Evento</h4>
+
+            <div class="checkout-summary__item">
+              <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary);"><i class="bi bi-calendar3" style="margin-right: 8px;"></i>Data</span>
+              <span style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);">15 de Agosto, 2026</span>
+            </div>
+            <div class="checkout-summary__item">
+              <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary);"><i class="bi bi-clock" style="margin-right: 8px;"></i>Horário</span>
+              <span style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);">06:00h</span>
+            </div>
+            <div class="checkout-summary__item">
+              <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary);"><i class="bi bi-geo-alt" style="margin-right: 8px;"></i>Local</span>
+              <span style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);">Av. Paulista, SP</span>
+            </div>
+            <div class="checkout-summary__item">
+              <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary);"><i class="bi bi-signpost-2" style="margin-right: 8px;"></i>Distâncias</span>
+              <span style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);">5K · 10K · 21K</span>
+            </div>
+            <div class="checkout-summary__item">
+              <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary);"><i class="bi bi-tag" style="margin-right: 8px;"></i>A partir de</span>
+              <span style="font-size: var(--font-size-lg); font-weight: var(--font-weight-extrabold); color: var(--color-primary);">R$ 89</span>
+            </div>
+            <div class="checkout-summary__item">
+              <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary);"><i class="bi bi-people" style="margin-right: 8px;"></i>Vagas</span>
+              <span style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);">3.500 atletas</span>
+            </div>
+
+            <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light);">
+              <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-3);"><i class="bi bi-hourglass-split" style="margin-right: 6px;"></i>Contagem Regressiva</h4>
+              <div style="display: flex; gap: var(--space-3); text-align: center;" data-countdown="2026-08-15T07:00:00">
+                <div style="flex: 1; background: var(--color-bg); border-radius: var(--radius-md); padding: var(--space-3);">
+                  <div class="counter__number" style="font-size: var(--font-size-xl); color: var(--color-primary);">00</div>
+                  <div style="font-size: 10px; color: var(--color-text-muted); text-transform: uppercase;">Dias</div>
+                </div>
+                <div style="flex: 1; background: var(--color-bg); border-radius: var(--radius-md); padding: var(--space-3);">
+                  <div class="counter__number" style="font-size: var(--font-size-xl); color: var(--color-primary);">00</div>
+                  <div style="font-size: 10px; color: var(--color-text-muted); text-transform: uppercase;">Horas</div>
+                </div>
+                <div style="flex: 1; background: var(--color-bg); border-radius: var(--radius-md); padding: var(--space-3);">
+                  <div class="counter__number" style="font-size: var(--font-size-xl); color: var(--color-primary);">00</div>
+                  <div style="font-size: 10px; color: var(--color-text-muted); text-transform: uppercase;">Min</div>
+                </div>
+                <div style="flex: 1; background: var(--color-bg); border-radius: var(--radius-md); padding: var(--space-3);">
+                  <div class="counter__number" style="font-size: var(--font-size-xl); color: var(--color-primary);">00</div>
+                  <div style="font-size: 10px; color: var(--color-text-muted); text-transform: uppercase;">Seg</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light);">
+              <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-3);"><i class="bi bi-share" style="margin-right: 6px;"></i>Compartilhar</h4>
+              <div style="display: flex; gap: var(--space-2);">
+                <a href="#" style="width:40px;height:40px;border-radius:var(--radius-md);background:var(--color-bg);display:flex;align-items:center;justify-content:center;color:var(--color-text-secondary);transition:all 0.2s;" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" style="width:40px;height:40px;border-radius:var(--radius-md);background:var(--color-bg);display:flex;align-items:center;justify-content:center;color:var(--color-text-secondary);transition:all 0.2s;" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" style="width:40px;height:40px;border-radius:var(--radius-md);background:var(--color-bg);display:flex;align-items:center;justify-content:center;color:var(--color-text-secondary);transition:all 0.2s;" aria-label="Copiar link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="navbar__logo" aria-label="NVR Sports">
-            <span class="navbar__logo-icon">NVR</span>
-            <span class="navbar__logo-text">SPORTS</span>
+          <a href="index.html" class="footer__logo">
+            <div class="navbar__logo-icon" style="width:36px;height:36px;font-size:11px;">NVR</div>
+            <span>NVR</span>Sports
           </a>
-          <p class="footer__description">A plataforma líder em inscrições para eventos de corrida no Brasil. Conectamos atletas a experiências inesquecíveis.</p>
+          <p class="footer__description">A plataforma mais moderna para inscrições de corridas do Brasil.</p>
           <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="Instagram">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a href="#" class="footer__social-link" aria-label="Twitter">
-              <i class="bi bi-twitter-x"></i>
-            </a>
-            <a href="#" class="footer__social-link" aria-label="YouTube">
-              <i class="bi bi-youtube"></i>
-            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="footer__social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
-
-        <div class="footer__links">
-          <h4 class="footer__links-title">Plataforma</h4>
-          <ul class="footer__list">
-            <li><a href="eventos.html" class="footer__link">Eventos</a></li>
-            <li><a href="resultados.html" class="footer__link">Resultados</a></li>
-            <li><a href="#" class="footer__link">Ranking</a></li>
-            <li><a href="#" class="footer__link">Blog</a></li>
-          </ul>
+        <div>
+          <h4 class="footer__title">Plataforma</h4>
+          <a href="eventos.html" class="footer__link">Eventos</a>
+          <a href="#" class="footer__link">Resultados</a>
+          <a href="#" class="footer__link">Rankings</a>
         </div>
-
-        <div class="footer__links">
-          <h4 class="footer__links-title">Empresa</h4>
-          <ul class="footer__list">
-            <li><a href="sobre.html" class="footer__link">Sobre Nós</a></li>
-            <li><a href="#" class="footer__link">Para Organizadores</a></li>
-            <li><a href="#" class="footer__link">Trabalhe Conosco</a></li>
-            <li><a href="contato.html" class="footer__link">Contato</a></li>
-          </ul>
+        <div>
+          <h4 class="footer__title">Empresa</h4>
+          <a href="#" class="footer__link">Sobre nós</a>
+          <a href="contato.html" class="footer__link">Contato</a>
+          <a href="#" class="footer__link">Blog</a>
         </div>
-
-        <div class="footer__links">
-          <h4 class="footer__links-title">Suporte</h4>
-          <ul class="footer__list">
-            <li><a href="#" class="footer__link">Central de Ajuda</a></li>
-            <li><a href="#" class="footer__link">Termos de Uso</a></li>
-            <li><a href="#" class="footer__link">Política de Privacidade</a></li>
-            <li><a href="#" class="footer__link">FAQ</a></li>
-          </ul>
+        <div>
+          <h4 class="footer__title">Suporte</h4>
+          <a href="#" class="footer__link">Central de Ajuda</a>
+          <a href="#" class="footer__link">Privacidade</a>
+          <a href="#" class="footer__link">Termos</a>
         </div>
       </div>
-
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2026 NVR Sports. Todos os direitos reservados.</p>
-        <p class="footer__credit">Feito com <i class="bi bi-heart-fill"></i> para a comunidade de corrida</p>
+        <p>&copy; 2026 NVR Sports. Todos os direitos reservados.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+        </div>
       </div>
     </div>
   </footer>
