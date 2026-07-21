@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página não encontrada | NVR Sports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-nvr">NVR</span>
+                <span class="navbar__logo-sports">Sports</span>
+            </a>
+            <ul class="navbar__links">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="eventos.html" class="navbar__link">Eventos</a></li>
+                <li><a href="contato.html" class="navbar__link">Contato</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="#" class="navbar__login">Entrar</a>
+                <a href="#" class="btn btn--primary">Inscreva-se</a>
+            </div>
+            <button class="navbar__mobile-toggle" aria-label="Abrir menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-nvr">NVR</span>
+                <span class="navbar__logo-sports">Sports</span>
+            </a>
+            <button class="mobile-menu__close" aria-label="Fechar menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu__links">
+            <li><a href="index.html" class="mobile-menu__link">Home</a></li>
+            <li><a href="eventos.html" class="mobile-menu__link">Eventos</a></li>
+            <li><a href="contato.html" class="mobile-menu__link">Contato</a></li>
+        </ul>
+        <div class="mobile-menu__actions">
+            <a href="#" class="mobile-menu__link">Entrar</a>
+            <a href="#" class="btn btn--primary btn--block">Inscreva-se</a>
+        </div>
+    </div>
+    <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+
+    <!-- Error Page Content -->
+    <section class="error-page">
+        <div class="container error-page__container">
+            <div class="error-page__number">404</div>
+            <h1 class="error-page__title">Página não encontrada</h1>
+            <p class="error-page__text">A página que você procura não existe ou foi movida.</p>
+            <div class="error-page__actions">
+                <a href="index.html" class="btn btn--primary">
+                    <i class="bi bi-house-fill"></i>
+                    Voltar ao Início
+                </a>
+                <a href="eventos.html" class="btn btn--outline">
+                    <i class="bi bi-calendar-event"></i>
+                    Ver Eventos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="navbar__logo">
+                        <span class="navbar__logo-nvr">NVR</span>
+                        <span class="navbar__logo-sports">Sports</span>
+                    </a>
+                    <p class="footer__description">Conectando corredores a experiências inesquecíveis em corridas de rua por todo o Brasil.</p>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer__social">
+                    <h4 class="footer__heading">Redes Sociais</h4>
+                    <div class="footer__social-links">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 NVR Sports. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

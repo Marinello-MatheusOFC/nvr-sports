@@ -1,0 +1,200 @@
+/* ============================================
+   NVR SPORTS - Responsive Styles
+   ============================================ */
+
+/* ---- Tablet (max-width: 1024px) ---- */
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-5xl: 3rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 2rem;
+  }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__brand {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+
+  .steps {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .step__line {
+    width: 30px;
+  }
+
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-sidebar {
+    position: static;
+  }
+}
+
+/* ---- Mobile Large (max-width: 768px) ---- */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-5xl: 2.25rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.5rem;
+    --navbar-height: 72px;
+  }
+
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .section--lg {
+    padding: var(--space-20) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+
+  .section-header__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  /* Navbar */
+  .navbar__links,
+  .navbar__login {
+    display: none;
+  }
+
+  .navbar__mobile-toggle {
+    display: flex;
+  }
+
+  .navbar__cta-desktop {
+    display: none;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn--lg {
+    height: 52px;
+    padding: 0 var(--space-8);
+  }
+
+  /* Steps */
+  .steps {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .step__label {
+    display: none;
+  }
+
+  .step__line {
+    width: 24px;
+  }
+
+  /* Tabs */
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabs--full {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ---- Mobile Small (max-width: 480px) ---- */
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-5xl: 1.875rem;
+    --font-size-4xl: 1.75rem;
+    --font-size-3xl: 1.5rem;
+  }
+
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .card__body {
+    padding: var(--space-4);
+  }
+
+  .card__image {
+    height: 180px;
+  }
+
+  .modal {
+    margin: var(--space-4);
+    border-radius: var(--radius-xl);
+  }
+
+  .modal__header,
+  .modal__body,
+  .modal__footer {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+
+  .btn {
+    height: 48px;
+    padding: 0 var(--space-6);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .toast {
+    min-width: auto;
+    max-width: calc(100vw - 48px);
+    margin-right: 0;
+  }
+
+  .toast-container {
+    right: var(--space-4);
+    left: var(--space-4);
+  }
+}

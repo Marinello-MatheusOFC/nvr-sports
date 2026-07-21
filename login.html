@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NVR Sports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <main class="auth-layout">
+        <section class="auth-panel auth-form-panel">
+            <div class="auth-form-panel__inner">
+                <a href="index.html" class="auth-logo">
+                    <img src="assets/images/logo.svg" alt="NVR Sports" class="auth-logo__img">
+                </a>
+
+                <div class="auth-form-panel__header">
+                    <h1 class="auth-form-panel__title">Bem-vindo de volta</h1>
+                    <p class="auth-form-panel__subtitle">Entre na sua conta para gerenciar suas corridas</p>
+                </div>
+
+                <form class="auth-form" data-validate action="#" method="POST">
+                    <div class="form-group form-floating">
+                        <input type="email" id="login-email" name="email" class="form-input" placeholder="E-mail" required>
+                        <label for="login-email" class="form-label">E-mail</label>
+                        <span class="form-input-icon">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                    </div>
+
+                    <div class="form-group form-floating">
+                        <input type="password" id="login-password" name="password" class="form-input" placeholder="Senha" required>
+                        <label for="login-password" class="form-label">Senha</label>
+                        <span class="form-input-icon">
+                            <i class="bi bi-lock"></i>
+                        </span>
+                        <button type="button" class="form-input-action" data-toggle-password="login-password" aria-label="Mostrar senha">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="form-group form-group--row">
+                        <a href="esqueci-senha.html" class="form-link">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">
+                        Entrar
+                    </button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>ou</span>
+                </div>
+
+                <div class="auth-social">
+                    <button type="button" class="btn btn--social btn--social-google">
+                        <i class="bi bi-google"></i>
+                        Entrar com Google
+                    </button>
+                    <button type="button" class="btn btn--social btn--social-apple">
+                        <i class="bi bi-apple"></i>
+                        Entrar com Apple
+                    </button>
+                </div>
+
+                <p class="auth-form-panel__footer">
+                    Não tem conta? <a href="cadastro.html" class="form-link form-link--bold">Cadastre-se</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="auth-panel auth-visual">
+            <div class="auth-visual__pattern"></div>
+            <div class="auth-visual__content">
+                <div class="auth-visual__icon">
+                    <i class="bi bi-flag"></i>
+                </div>
+                <h2 class="auth-visual__title">Cada corrida conta.</h2>
+                <p class="auth-visual__text">
+                    Acesse sua conta e continue sua jornada. 
+                    Histórico de provas, conquistas e o caminho 
+                    para o seu próximo recorde estão aqui.
+                </p>
+                <div class="auth-visual__stats">
+                    <div class="auth-visual__stat">
+                        <span class="auth-visual__stat-number">12k+</span>
+                        <span class="auth-visual__stat-label">Atletas ativos</span>
+                    </div>
+                    <div class="auth-visual__stat">
+                        <span class="auth-visual__stat-number">350+</span>
+                        <span class="auth-visual__stat-label">Provas realizadas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
