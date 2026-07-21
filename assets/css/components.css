@@ -107,11 +107,11 @@
 }
 
 .navbar.scrolled .navbar__link {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .navbar.scrolled .navbar__link:hover {
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .navbar.scrolled .navbar__link::after {
@@ -133,11 +133,11 @@
 }
 
 .navbar.scrolled .navbar__login {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .navbar.scrolled .navbar__login:hover {
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .navbar__cta {
