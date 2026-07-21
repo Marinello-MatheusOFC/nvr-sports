@@ -142,6 +142,28 @@ p {
   padding: var(--space-24) 0;
 }
 
+.section--alt {
+  background: var(--color-bg-alt);
+}
+
+.section--dark {
+  background: var(--color-text);
+  color: white;
+}
+
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4,
+.section--dark h5,
+.section--dark h6 {
+  color: white;
+}
+
+.section--dark p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .section--sm {
   padding: var(--space-16) 0;
 }
