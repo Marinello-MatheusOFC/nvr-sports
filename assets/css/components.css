@@ -1515,11 +1515,11 @@
 }
 
 [data-theme="dark"] .auth-panel {
-  background: var(--color-card);
+  background: var(--color-bg);
 }
 
 [data-theme="dark"] .auth-form-panel {
-  background: var(--color-bg);
+  background: transparent;
 }
 
 [data-theme="dark"] .event-hero {

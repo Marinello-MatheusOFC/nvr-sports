@@ -107,6 +107,16 @@
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  #events-grid {
+    gap: var(--space-5);
+  }
+
+  .events-page-header {
+    padding-top: calc(var(--navbar-height-scrolled) + var(--space-8)) !important;
+    padding-bottom: var(--space-6) !important;
   }
 
   .section-header {
@@ -492,6 +502,15 @@
 
   .card__body {
     padding: var(--space-4);
+  }
+
+  .events-page-header {
+    padding-top: calc(var(--navbar-height-scrolled) + var(--space-6)) !important;
+    padding-bottom: var(--space-4) !important;
+  }
+
+  #events-grid {
+    gap: var(--space-4);
   }
 
   .card__image {

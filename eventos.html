@@ -51,7 +51,7 @@
   </div>
 
   <!-- Page Header -->
-  <section style="padding-top: calc(var(--navbar-height-scrolled) + var(--space-16)); padding-bottom: var(--space-10); background: var(--color-card); border-bottom: 1px solid var(--color-border-light);">
+  <section class="events-page-header" style="padding-top: calc(var(--navbar-height-scrolled) + var(--space-16)); padding-bottom: var(--space-10); background: var(--color-card); border-bottom: 1px solid var(--color-border-light);">
     <div class="container">
       <h1 style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); margin-bottom: var(--space-3);" class="reveal">Eventos</h1>
       <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); max-width: 600px;" class="reveal">Encontre a corrida perfeita para você. Filtre por tipo, distância ou data.</p>
@@ -92,7 +92,7 @@
         <div class="events-count">Mostrando <strong id="events-count-number">8</strong> eventos</div>
       </div>
 
-      <div class="grid grid-3 reveal-stagger" id="events-grid">
+      <div class="grid grid-3 reveal-stagger" id="events-grid" style="gap: var(--space-8);">
         <a href="evento.html" class="card" data-searchable data-month="agosto" data-type="road-run" data-distances="5k,10k,21k">
           <div class="card__image-wrapper">
             <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80" alt="Corrida de Rua SP" class="card__image" loading="lazy">
