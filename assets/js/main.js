@@ -15,7 +15,6 @@ const App = {
     this.initProfileNav();
     this.initEventTabs();
     this.initCategorySelect();
-    this.initSearch();
 
     // Remove loading
     window.addEventListener('load', () => {
@@ -178,22 +177,6 @@ const App = {
     });
   },
 
-  /* ---- Search ---- */
-  initSearch() {
-    const searchInput = document.querySelector('.search-bar__input');
-    if (!searchInput) return;
-
-    searchInput.addEventListener(
-      'input',
-      Utils.debounce(() => {
-        const query = searchInput.value.toLowerCase();
-        document.querySelectorAll('[data-searchable]').forEach((item) => {
-          const text = item.textContent.toLowerCase();
-          item.style.display = text.includes(query) ? '' : 'none';
-        });
-      }, 300)
-    );
-  },
 };
 
 /* ---- Init ---- */

@@ -14,8 +14,14 @@
     <link rel="stylesheet" href="assets/css/pages.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script>if(localStorage.getItem('nvr-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 </head>
 <body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema" style="position:fixed;top:var(--space-6);right:var(--space-6);z-index:999;">
+        <i class="bi bi-sun-fill theme-toggle__icon--light"></i>
+        <i class="bi bi-moon-fill theme-toggle__icon--dark"></i>
+    </button>
+
     <main class="auth-layout">
         <section class="auth-panel auth-form-panel">
             <div class="auth-form-panel__inner">

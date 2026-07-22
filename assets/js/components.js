@@ -6,6 +6,7 @@ const Components = {
   init() {
     this.initNavbar();
     this.initMobileMenu();
+    this.initThemeToggle();
     this.initModals();
     this.initToasts();
     this.initTabs();
@@ -59,6 +60,28 @@ const Components = {
         menu.classList.remove('active');
         document.body.style.overflow = '';
       });
+    });
+  },
+
+  /* ---- Theme Toggle ---- */
+  initThemeToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    const saved = localStorage.getItem('nvr-theme');
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('nvr-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('nvr-theme', 'dark');
+      }
     });
   },
 
@@ -224,15 +247,49 @@ const Components = {
 
   /* ---- Filters ---- */
   initFilters() {
-    document.querySelectorAll('.filter-chip').forEach((chip) => {
+    const chips = document.querySelectorAll('.filter-chip');
+    const typeSelect = document.getElementById('filter-type');
+    const distanceSelect = document.getElementById('filter-distance');
+    const countEl = document.getElementById('events-count-number');
+    const grid = document.getElementById('events-grid');
+    const searchInput = document.querySelector('.search-bar__input');
+    if (!grid) return;
+
+    const applyFilters = () => {
+      const query = searchInput ? searchInput.value.toLowerCase() : '';
+      const activeChip = document.querySelector('.filter-chip.active');
+      const monthFilter = activeChip?.getAttribute('data-month') || '';
+      const typeFilter = typeSelect?.value || '';
+      const distanceFilter = distanceSelect?.value || '';
+      let visible = 0;
+
+      grid.querySelectorAll('.card').forEach((card) => {
+        const matchSearch = !query || card.textContent.toLowerCase().includes(query);
+        const matchMonth = !monthFilter || card.dataset.month === monthFilter;
+        const matchType = !typeFilter || card.dataset.type === typeFilter;
+        const matchDistance = !distanceFilter || (card.dataset.distances || '').includes(distanceFilter);
+        const show = matchSearch && matchMonth && matchType && matchDistance;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      if (countEl) countEl.textContent = visible;
+    };
+
+    chips.forEach((chip) => {
       chip.addEventListener('click', () => {
         const group = chip.closest('.filter-chips');
         if (!group.hasAttribute('data-multi')) {
           group.querySelectorAll('.filter-chip').forEach((c) => c.classList.remove('active'));
         }
         chip.classList.toggle('active');
+        applyFilters();
       });
     });
+
+    if (typeSelect) typeSelect.addEventListener('change', applyFilters);
+    if (distanceSelect) distanceSelect.addEventListener('change', applyFilters);
+    if (searchInput) searchInput.addEventListener('input', Utils.debounce(applyFilters, 300));
   },
 
   /* ---- Form Validation ---- */

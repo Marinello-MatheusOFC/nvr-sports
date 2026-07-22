@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script>if(localStorage.getItem('nvr-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 </head>
 <body>
 
@@ -31,6 +32,10 @@
       </div>
 
       <div class="navbar__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+          <i class="bi bi-sun-fill theme-toggle__icon--light"></i>
+          <i class="bi bi-moon-fill theme-toggle__icon--dark"></i>
+        </button>
         <a href="login.html" class="navbar__login">Entrar</a>
         <a href="eventos.html" class="btn btn--primary navbar__cta-desktop">Inscreva-se</a>
       </div>
@@ -100,22 +105,90 @@
   <!-- Stats -->
   <section class="section--sm" style="background: var(--color-card); border-bottom: 1px solid var(--color-border-light);">
     <div class="container">
-      <div class="grid grid-4" style="text-align:center; gap: var(--space-8);">
+      <div class="grid grid-3" style="text-align:center; gap: var(--space-8);">
         <div class="reveal">
-          <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--color-primary);" data-count="150">0</div>
-          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">Corridas Realizadas</div>
-        </div>
-        <div class="reveal">
-          <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--color-secondary);" data-count="25000">0</div>
-          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">Atletas Inscritos</div>
+          <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--color-primary);" data-count="20000">0</div>
+          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">Atletas Ativos</div>
         </div>
         <div class="reveal">
           <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--color-accent);" data-count="40">0</div>
-          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">Cidades</div>
+          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">Provas e Desafios Organizados</div>
         </div>
         <div class="reveal">
-          <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--color-text);" data-count="98">0</div>
-          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">% Satisfação</div>
+          <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--color-secondary);" data-count="3">0</div>
+          <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-1);">Professores Especializados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nos -->
+  <section class="section about" id="sobre" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content reveal">
+          <span class="about__label"><i class="bi bi-lightning-charge-fill"></i> Quem Somos</span>
+          <h2 class="about__title">A plataforma que conecta atletas a experiências inesquecíveis</h2>
+          <p class="about__description">
+            Desde 2018, a NVR Sports transforma a corrida de rua em Brasil.
+            Combinamos tecnologia de ponta com a emoção de competir para criar provas
+            seguras, inclusivas e memoráveis para todos os níveis de atletas.
+          </p>
+          <div class="about__values">
+            <div class="about__value-card">
+              <div class="about__value-icon about__value-icon--primary">
+                <i class="bi bi-trophy-fill"></i>
+              </div>
+              <div class="about__value-content">
+                <h4 class="about__value-title">Missão</h4>
+                <p class="about__value-text">Organizar provas de alta qualidade com segurança, tecnologia e emoção para cada atleta.</p>
+              </div>
+            </div>
+            <div class="about__value-card">
+              <div class="about__value-icon about__value-icon--secondary">
+                <i class="bi bi-eye-fill"></i>
+              </div>
+              <div class="about__value-content">
+                <h4 class="about__value-title">Visão</h4>
+                <p class="about__value-text">Ser a maior plataforma de corridas de rua da América Latina, conectando 100 mil+ atletas.</p>
+              </div>
+            </div>
+            <div class="about__value-card">
+              <div class="about__value-icon about__value-icon--accent">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+              <div class="about__value-content">
+                <h4 class="about__value-title">Valores</h4>
+                <p class="about__value-text">Inclusão, saúde, tecnologia e compromisso com a experiência de cada atleta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__visual reveal">
+          <div class="about__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=700&q=80" alt="Atletas NVR Sports" class="about__image" loading="lazy">
+            <div class="about__image-overlay"></div>
+            <div class="about__image-badge">
+              <span class="about__image-badge-number">8+</span>
+              <span class="about__image-badge-text">Anos de<br>experiência</span>
+            </div>
+          </div>
+          <div class="about__floating-stats">
+            <div class="about__floating-stat">
+              <i class="bi bi-people-fill"></i>
+              <div>
+                <strong>3</strong>
+                <span>Professores</span>
+              </div>
+            </div>
+            <div class="about__floating-stat">
+              <i class="bi bi-calendar-event-fill"></i>
+              <div>
+                <strong>40+</strong>
+                <span>Provas</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -230,15 +303,15 @@
         <!-- Card 4 -->
         <a href="evento.html" class="card" data-searchable>
           <div class="card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&q=80" alt="Corrida de Rua Igarçu do Tietê" class="card__image" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&q=80" alt="Corrida de Rua Igaracu do Tietê" class="card__image" loading="lazy">
             <div class="card__badge">Inscrições Abertas</div>
           </div>
           <div class="card__body">
             <div class="card__category">Road Run</div>
-            <h3 class="card__title">Corrida de Rua Igarçu do Tietê</h3>
+            <h3 class="card__title">Corrida de Rua Igaracu do Tietê</h3>
             <div class="card__meta">
               <div class="card__meta-item">
-                <i class="bi bi-geo-alt"></i> Igarçu do Tietê, SP
+                <i class="bi bi-geo-alt"></i> Igaracu do Tietê, SP
               </div>
               <div class="card__meta-item">
                 <i class="bi bi-calendar3"></i> 12 de Outubro, 2026
@@ -370,7 +443,7 @@
           </div>
           <p class="testimonial-card__text">Como organizador, a NVR Sports transformou meu evento. Check-in digital, comunicação automática e relatórios completos.</p>
           <div class="testimonial-card__author">
-            <div class="avatar" style="background: rgba(255,122,0,0.1); color: var(--color-accent);">PL</div>
+            <div class="avatar avatar--accent">PL</div>
             <div>
               <div style="font-weight: var(--font-weight-semibold); font-size: var(--font-size-sm);">Paulo Lima</div>
               <div style="font-size: var(--font-size-xs); color: var(--color-text-muted);">Organizador de Eventos</div>
@@ -461,7 +534,7 @@
       <div class="cta-banner reveal">
         <h2 class="cta-banner__title">Pronto para correr?</h2>
         <p class="cta-banner__text">Junte-se a mais de 25.000 atletas que já escolheram a NVR Sports</p>
-        <a href="cadastro.html" class="btn btn--lg" style="background: white; color: var(--color-primary); font-weight: var(--font-weight-bold);">
+        <a href="cadastro.html" class="btn btn--lg cta-banner__btn" style="font-weight: var(--font-weight-bold);">
           Criar Conta Grátis
         </a>
       </div>
@@ -472,13 +545,23 @@
   <section class="section--sm" style="background: var(--color-card);">
     <div class="container">
       <div class="section-header reveal" style="margin-bottom: var(--space-8);">
-        <h2 class="section-header__title" style="font-size: var(--font-size-2xl);">Onde estamos</h2>
-      </div>
-      <div class="map-container reveal">
-        <div class="map-placeholder">
-          <i class="bi bi-geo-alt"></i>
-          <p>São Paulo, SP - Brasil</p>
+        <div class="section-header__label" style="justify-content: flex-start;">
+          <i class="bi bi-geo-alt-fill"></i> Onde estamos
         </div>
+        <h2 class="section-header__title" style="font-size: var(--font-size-2xl);">Nossa sede</h2>
+        <p class="section-header__subtitle">R. Antonio Turatti, 821 - Cidade Alta, Jaú/SP</p>
+      </div>
+      <div class="map-container reveal" style="border-radius: var(--radius-xl); overflow: hidden; height: 400px;">
+        <iframe
+          src="https://www.google.com/maps?q=R.+Antonio+Turatti,+821+-+Cidade+Alta,+Jau+-+SP&output=embed"
+          width="100%"
+          height="400"
+          style="border:0; width:100%; height:100%;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização NVR Sports - R. Antonio Turatti, 821 - Cidade Alta, Jaú/SP">
+        </iframe>
       </div>
     </div>
   </section>
