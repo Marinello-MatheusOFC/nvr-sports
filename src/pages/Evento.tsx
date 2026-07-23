@@ -757,11 +757,11 @@ export default function Evento() {
               <SectionTitle>Percursos</SectionTitle>
               {details?.routes ? (
                 <RouteCard>
-                  <RouteDistanceBadge>{(details.routes as Record<string, string>).difficulty || 'Moderado'}</RouteDistanceBadge>
+                  <RouteDistanceBadge>{details.routes[0]?.distance || 'N/A'}</RouteDistanceBadge>
                   <RouteTitle>{event.title} — Percurso Oficial</RouteTitle>
                   <RouteSubtitle>📍 {event.location}, {event.city}/{event.state}</RouteSubtitle>
                   <RouteDesc>
-                    Confira o mapa oficial do percurso. Dificuldade: {(details.routes as Record<string, string>).difficulty || 'Não informado'}.
+                    {details.routes[0]?.description || 'Confira o mapa oficial do percurso.'}
                     O percurso foi planejado para proporcionar uma experiência única aos participantes.
                   </RouteDesc>
                 </RouteCard>
