@@ -122,7 +122,6 @@
   /* ---- Navbar ---- */
   --navbar-height: 80px;
   --navbar-height-scrolled: 64px;
-}
 
 /* ---- Dark Theme ---- */
 [data-theme="dark"] {
@@ -148,4 +147,5 @@
   --shadow-xl: 0 16px 56px rgba(0, 0, 0, 0.40);
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.20);
   --shadow-card-hover: 0 8px 32px rgba(0, 87, 255, 0.20);
+}
 }
